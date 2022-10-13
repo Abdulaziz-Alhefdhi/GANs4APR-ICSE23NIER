@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="ALL" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="e0f2e771-f131-4d27-88ac-04bec3e9632e" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/../classify/code2class/baselines.py" beforeDir="false" afterPath="$PROJECT_DIR$/../classify/code2class/baselines.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../classify/code2class/benchmark.py" beforeDir="false" afterPath="$PROJECT_DIR$/../classify/code2class/benchmark.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../classify/code2class/cv.py" beforeDir="false" afterPath="$PROJECT_DIR$/../classify/code2class/cv.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../classify/code2class/cv_end2end.py" beforeDir="false" afterPath="$PROJECT_DIR$/../classify/code2class/cv_end2end.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../classify/code2class/cv_rf.py" beforeDir="false" afterPath="$PROJECT_DIR$/../classify/code2class/cv_rf.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../classify/com2class/com2class_utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/../classify/com2class/com2class_utils.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../classify/com2class/train/lstm_class2.py" beforeDir="false" afterPath="$PROJECT_DIR$/../classify/com2class/train/lstm_class2.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
+  <component name="DefaultGradleProjectSettings">
+    <option name="isMigrated" value="true" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>visitor</find>
+      <find>Optional</find>
+      <find>javatoken</find>
+      <find>functionA</find>
+      <find>home</find>
+      <find>testDirectory</find>
+      <find>mainDirectory</find>
+      <find>outDirectory</find>
+      <find>idWriter</find>
+      <find>processFile</find>
+      <find>MethodVisitor</find>
+      <find>functionName</find>
+      <find>INTERFACE_BODY</find>
+      <find>methodcallex</find>
+      <find>Start</find>
+      <find>describe</find>
+      <find>int</find>
+      <find>methodvis</find>
+      <find>methodvisit</find>
+      <find>tokeniz</find>
+      <find>System.out.println</find>
+      <find>print</find>
+      <find>correctFileName</find>
+      <find>toExtractFileName</find>
+      <find>println</find>
+      <find>for</find>
+      <find>oneLineComment</find>
+      <find>println4</find>
+      <find>writeToDisk</find>
+    </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="$APPLICATION_HOME_DIR$/plugins/maven/lib/maven3" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="1Ol7uphSsSjK0o5JcpdyhVWVYef" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="Downloaded.Files.Path.Enabled" value="false" />
+    <property name="Repository.Attach.Annotations" value="false" />
+    <property name="Repository.Attach.JavaDocs" value="false" />
+    <property name="Repository.Attach.Sources" value="false" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1554263636925" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="project.structure.last.edited" value="Problems" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
+    <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/java" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.ASTToSBT">
+    <configuration name="ASTToSBT" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="ALTERNATIVE_JRE_PATH" value="9.0" />
+      <option name="MAIN_CLASS_NAME" value="ASTToSBT" />
+      <module name="testartifactname" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AllJavadocExtractor" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="AllJavadocExtractor" />
+      <module name="testartifactname" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MethodsAndJavaDocs" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="MethodsAndJavaDocs" />
+      <module name="testartifactname" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ReadScore" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ReadScore" />
+      <module name="testartifactname" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="VoidVisitorComplete" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="VoidVisitorComplete" />
+      <module name="testartifactname" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="Application" factoryName="Application">
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="JUnit" factoryName="JUnit">
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="TestNG">
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="VM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.VoidVisitorComplete" />
+      <item itemvalue="Application.AllJavadocExtractor" />
+      <item itemvalue="Application.MethodsAndJavaDocs" />
+      <item itemvalue="Application.ASTToSBT" />
+      <item itemvalue="Application.ReadScore" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.ASTToSBT" />
+        <item itemvalue="Application.ReadScore" />
+        <item itemvalue="Application.VoidVisitorComplete" />
+        <item itemvalue="Application.MethodsAndJavaDocs" />
+        <item itemvalue="Application.AllJavadocExtractor" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="e0f2e771-f131-4d27-88ac-04bec3e9632e" name="Default" comment="" />
+      <created>1530435229024</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1530435229024</updated>
+      <workItem from="1530435232848" duration="43199000" />
+      <workItem from="1530666581729" duration="11820000" />
+      <workItem from="1530704577915" duration="908000" />
+      <workItem from="1530756882004" duration="6594000" />
+      <workItem from="1530768323822" duration="1884000" />
+      <workItem from="1531701978290" duration="31414000" />
+      <workItem from="1532398964394" duration="49000" />
+      <workItem from="1532399031699" duration="21899000" />
+      <workItem from="1532607718045" duration="9374000" />
+      <workItem from="1533000838932" duration="21788000" />
+      <workItem from="1536915845676" duration="4546000" />
+      <workItem from="1537232847943" duration="14000" />
+      <workItem from="1537233308094" duration="923000" />
+      <workItem from="1537252643513" duration="29867000" />
+      <workItem from="1537420745287" duration="2049000" />
+      <workItem from="1544569664254" duration="23000" />
+      <workItem from="1545188898595" duration="4487000" />
+      <workItem from="1545195766906" duration="4500000" />
+      <workItem from="1545440607296" duration="1247000" />
+      <workItem from="1545791214191" duration="2401000" />
+      <workItem from="1546140008111" duration="28000" />
+      <workItem from="1546140057165" duration="144000" />
+      <workItem from="1547426014383" duration="326000" />
+      <workItem from="1547426460266" duration="67000" />
+      <workItem from="1547426552919" duration="30000" />
+      <workItem from="1547426607950" duration="38000" />
+      <workItem from="1547426663826" duration="13000" />
+      <workItem from="1547689512349" duration="908000" />
+      <workItem from="1548122736594" duration="2246000" />
+      <workItem from="1548125024078" duration="500000" />
+      <workItem from="1548292935408" duration="1094000" />
+      <workItem from="1553468686426" duration="23000" />
+      <workItem from="1553730877359" duration="83000" />
+      <workItem from="1553944871005" duration="2603000" />
+      <workItem from="1553947889214" duration="15626000" />
+      <workItem from="1554199597755" duration="11793000" />
+      <workItem from="1557372082715" duration="23000" />
+      <workItem from="1557971308444" duration="436000" />
+      <workItem from="1557971878538" duration="622000" />
+      <workItem from="1557973961680" duration="220000" />
+      <workItem from="1557974209225" duration="151000" />
+      <workItem from="1557975480215" duration="470000" />
+      <workItem from="1557976072498" duration="823000" />
+      <workItem from="1564052083704" duration="155000" />
+      <workItem from="1564106360176" duration="411000" />
+      <workItem from="1564451549749" duration="10729000" />
+      <workItem from="1564540440602" duration="17000" />
+      <workItem from="1564540488211" duration="30000" />
+      <workItem from="1564540559181" duration="202000" />
+      <workItem from="1564612780922" duration="6545000" />
+      <workItem from="1567556944398" duration="16000" />
+      <workItem from="1567556978838" duration="21000" />
+      <workItem from="1574921976477" duration="26000" />
+      <workItem from="1574922034183" duration="7676000" />
+      <workItem from="1582493500996" duration="30000" />
+      <workItem from="1582493566131" duration="64000" />
+      <workItem from="1582494149915" duration="192000" />
+      <workItem from="1582505321411" duration="806000" />
+      <workItem from="1583190940642" duration="161000" />
+      <workItem from="1586483886444" duration="1260000" />
+      <workItem from="1596079655741" duration="35000" />
+      <workItem from="1596079715495" duration="33000" />
+      <workItem from="1596079790783" duration="7000" />
+      <workItem from="1596079815561" duration="38000" />
+      <workItem from="1596079890697" duration="78000" />
+      <workItem from="1600145358360" duration="152000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="649" y="380" key="com.intellij.ide.util.TipDialog" timestamp="1596079818199">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state x="649" y="380" key="com.intellij.ide.util.TipDialog/67.27.1853.1053@67.27.1853.1053" timestamp="1596079818199" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/MethodsAndJavaDocs.java</url>
+          <line>81</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>

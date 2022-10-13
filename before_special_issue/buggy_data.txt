@@ -1,0 +1,5 @@
+String toTest = "woordenboek_nederlands-3.1.1-sm+tb+fx+fn.xpi";
+|| (this.collator != null && ! this.collator.equals(other.collator))
+dest = _dpMgr.planDeployment(vmProfile, plan, exclude);
+LOG.info(clazz + " is not a valid POJO type");
+if ((syncSites == null) || syncSites.isEmpty()) {

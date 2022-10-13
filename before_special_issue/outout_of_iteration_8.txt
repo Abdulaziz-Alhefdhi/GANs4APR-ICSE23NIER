@@ -1,0 +1,3011 @@
+Iteration 8/30:-
+Epoch 1/1
+5249/5249 [==============================] - 36s 7ms/step - loss: 0.0371 - acc: 0.9731
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 5249/5249 [1:28:04<00:00,  1.17it/s]
+Epoch 1/1
+5249/5249 [==============================] - 36s 7ms/step - loss: 0.0302 - acc: 0.9750
+Epoch 1/1
+5249/5249 [==============================] - 65s 12ms/step - loss: 159.8521 - model_1_loss: 0.7878 - model_2_loss: 1.5906
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 500/500 [07:50<00:00,  1.14it/s]
+Buggy code: assertThat ( lookupDocs . totalHits , equalTo ( 0 ) ) ;
+---
+Fixed code: assertThat ( lookupDocs . totalHits , equalTo ( 0L ) ) ;
+Genration:  assertThat ( "direct:start" , params , boolean 1 ) ;
+=============
+=============
+Buggy code: _resourceLimitMgr . decrementResourceCount ( volume . getAccountId ( ) , ResourceType . primary_storage , cmd . getDisplayVolume ( ) , new Long ( volume . getSize ( ) ) ) ;
+---
+Fixed code: _resourceLimitMgr . recalculateResourceCount ( volume . getAccountId ( ) , volume . getDomainId ( ) , ResourceType . primary_storage . getOrdinal ( ) ) ;
+Genration:  . class . getName ( ) . equals ( sl . getScratchColumnTypeMap ( ) , ( ( BigDecimal ) ) ) . execute ( ) ;
+=============
+=============
+Buggy code: return Class . forName ( className ) ;
+---
+Fixed code: return JavaUtils . loadClass ( className ) ;
+Genration:  return this . createResponse ( ) ;
+=============
+=============
+Buggy code: json . writeStringField ( e . getKey ( ) , e . getValue ( ) . toString ( ) ) ;
+---
+Fixed code: json . writeStringField ( e . getKey ( ) , e . getValue ( ) == null ? null : e . getValue ( ) . toString ( ) ) ;
+Genration:  + ( ( ) . length ( ) , new ( ) . > ( ) ,
+=============
+=============
+Buggy code: Reader r = hsf . getReader ( ) ;
+---
+Fixed code: Reader r = hsf . getCompactionReader ( ) ;
+Genration:  IndexReader r = IndexReader . open ( writer ) ;
+=============
+=============
+Buggy code: throw new UnknownRegionException ( Bytes . toString ( encodedRegionName ) ) ;
+---
+Fixed code: throw new UnknownRegionException ( Bytes . toStringBinary ( encodedRegionName ) ) ;
+Genration:  throw new IOException ( e . getMessage ( ) , e ) ;
+=============
+=============
+Buggy code: . setSubject ( "Review #" + reviewId )
+---
+Fixed code: . setSubject ( "Review #" + reviewId + ( "FALSE-POSITIVE" . equals ( notification . getFieldValue ( "new.resolution" ) ) ? " - False Positive" : "" ) )
+Genration:  . ( ) ) ;
+=============
+=============
+Buggy code: return new HiveQueryResultSet . Builder ( )
+---
+Fixed code: return new HiveQueryResultSet . Builder ( null )
+Genration:  return new HiveQueryResultSet . Builder ( null )
+=============
+=============
+Buggy code: includedColumns [ column ] ) {
+---
+Fixed code: ( column < includedColumns . length && includedColumns [ column ] ) ) {
+Genration:  {
+=============
+=============
+Buggy code: return numAllMemorySegments * segmentSize ;
+---
+Fixed code: return numAllMemorySegments * ( long ) segmentSize ;
+Genration:  return NAME ;
+=============
+=============
+Buggy code: private Sampler sampler = new Sampler ( ) ;
+---
+Fixed code: private Sampler sampler = new RandomSampler ( ) ;
+Genration:  final abstract d = new float ( ) ;
+=============
+=============
+Buggy code: if ( context . isNormalServer ( ) ) {
+---
+Fixed code: if ( context . isNormalServer ( ) && context . getServiceRegistry ( false ) . getService ( ModClusterService . NAME ) != null ) {
+Genration:  if ( context . isNormalServer ( ) && context . getServiceRegistry ( false ) . getService ( ModClusterService . NAME ) != null ) {
+=============
+=============
+Buggy code: : "number of dynamic paritions should be the same as the size of DP mapping" ;
+---
+Fixed code: : "number of dynamic partitions should be the same as the size of DP mapping" ;
+Genration:  return null ;
+=============
+=============
+Buggy code: this . port = b . port ;
+---
+Fixed code: this . name = b . name ;
+Genration:  this . fs = new HiveConf ( fs , ConfVars . HIVE_EXECUTION_ENGINE ) ;
+=============
+=============
+Buggy code: } catch ( Exception e ) {
+---
+Fixed code: } catch ( Throwable e ) {
+Genration:  } catch ( IOException ex ) {
+=============
+=============
+Buggy code: newCallbacks [ newCallbacks . length ] = subjectCallBack ;
+---
+Fixed code: newCallbacks [ newCallbacks . length - 1 ] = subjectCallBack ;
+Genration:  position [ i ] = ( long ) value ;
+=============
+=============
+Buggy code: TokenStream ts = new WhitespaceTokenizer ( TEST_VERSION_CURRENT , cs ) ;
+---
+Fixed code: TokenStream ts = new MockTokenizer ( cs , MockTokenizer . WHITESPACE , false ) ;
+Genration:  TokenStream ts = new MockTokenizer ( cs , MockTokenizer . WHITESPACE , false ) ;
+=============
+=============
+Buggy code: && isDeterministic ( ) ;
+---
+Fixed code: && isConsistentWithinQuery ( ) ;
+Genration:  if ( ! revisit && subExpResults != null ) ;
+=============
+=============
+Buggy code: newIndexWriterConfig ( TEST_VERSION_CURRENT , new MockAnalyzer ( MockTokenizer . WHITESPACE , false ) ) ) ;
+---
+Fixed code: newIndexWriterConfig ( TEST_VERSION_CURRENT , new MockAnalyzer ( random , MockTokenizer . WHITESPACE , false ) ) ) ;
+Genration:  newIndexWriterConfig ( TEST_VERSION_CURRENT , new MockAnalyzer ( random , MockTokenizer . WHITESPACE , false ) ) ) ;
+=============
+=============
+Buggy code: HiveFileFormatUtils . setFullyReadColumns ( conf ) ;
+---
+Fixed code: ColumnProjectionUtils . setFullyReadColumns ( conf ) ;
+Genration:  . get ( ConfigConstants . DEFAULT_CHARSET ) ;
+=============
+=============
+Buggy code: String uri = exchange . getFromEndpoint ( ) . getEndpointUri ( ) ;
+---
+Fixed code: String uri = response . getRequest ( ) . getResourceRef ( ) . toString ( ) ;
+Genration:  String value = uri . toString ( ) . toLowerCase ( Locale . ENGLISH ) ;
+=============
+=============
+Buggy code: } else if ( ShimLoader . getHadoopShims ( ) . compareText ( mMax , o ) < 0 ) {
+---
+Fixed code: } else if ( mMax . compareTo ( o ) < 0 ) {
+Genration:  } else if ( ShimLoader . getHadoopShims ( ) . compareText ( o ) < 0 ) {
+=============
+=============
+Buggy code: SpellChecker compareSP = new SpellCheckerMock ( compIdx , new LevensteinDistance ( ) , new SuggestWordFrequencyComparator ( ) ) ;
+---
+Fixed code: SpellChecker compareSP = new SpellCheckerMock ( compIdx , new LevenshteinDistance ( ) , new SuggestWordFrequencyComparator ( ) ) ;
+Genration:  , this = new BlobLibraryCacheManager ( cache , FlinkUserCodeClassLoaders . ResolveOrder . CHILD_FIRST , new String [ 0 ] ) ;
+=============
+=============
+Buggy code: PosixParser parser = new PosixParser ( ) ;
+---
+Fixed code: DefaultParser parser = new DefaultParser ( ) ;
+Genration:  DefaultParser parser = new DefaultParser ( ) ;
+=============
+=============
+Buggy code: Utilities . clearWorkMap ( ) ;
+---
+Fixed code: Utilities . clearWorkMap ( jconf ) ;
+Genration:  Utilities . clearWorkMap ( jc ) ;
+=============
+=============
+Buggy code: Network . State . getStateMachine ( ) . registerListener ( new NetworkStateListener ( _usageEventDao , _networksDao ) ) ;
+---
+Fixed code: Network . State . getStateMachine ( ) . registerListener ( new NetworkStateListener ( _usageEventDao , _networksDao , _configDao ) ) ;
+Genration:  UndertowLogger . ROOT_LOGGER . init ( fs . getName ( ) ) . iterator ( ) , false ) ;
+=============
+=============
+Buggy code: Table indexTable = buildTable ( DB_NAME , INDEX_TABLE_NAME ) ;
+---
+Fixed code: Table indexTable = buildIndexTable ( DB_NAME , INDEX_TABLE_NAME ) ;
+Genration:  Table indexTable = buildIndexTable ( DB_NAME , INDEX_TABLE_NAME ) ;
+=============
+=============
+Buggy code: if ( doc == postings . NO_MORE_DOCS ) {
+---
+Fixed code: if ( doc == DocIdSetIterator . NO_MORE_DOCS ) {
+Genration:  if ( ! == && ( udf , newExprs ) ) {
+=============
+=============
+Buggy code: return toWriter ( file , null ) ;
+---
+Fixed code: return toWriter ( file , false , IOHelper . getCharsetName ( null , true ) ) ;
+Genration:  return ! name . isEmpty ( ) , this . getSchema ( ) ) ;
+=============
+=============
+Buggy code: invokable . setup ( mockContext , new ExecutionConfig ( ) ) ;
+---
+Fixed code: invokable . setup ( mockContext ) ;
+Genration:  workersInZooKeeper . setCapacityUsed ( ;
+=============
+=============
+Buggy code: Processor childProcessor = routeContext . createProcessor ( this ) ;
+---
+Fixed code: Processor childProcessor = this . createChildProcessor ( routeContext , true ) ;
+Genration:  + this . createChildProcessor ( routeContext , true ) ;
+=============
+=============
+Buggy code: assertEquals ( "registry entry called hello must be specified on: process[ref:hello]" , e . getCause ( ) . getMessage ( ) ) ;
+---
+Fixed code: assertEquals ( "No bean could be found in the registry for: hello of type: org.apache.camel.Processor" , e . getCause ( ) . getMessage ( ) ) ;
+Genration:  assertEquals ( "MyScheduler-" + context . getName ( ) , quartz . getScheduler ( ) . toString ( ) ) ;
+=============
+=============
+Buggy code: Session session = startClient ( startServer ( serverSessionFrameListener ) , clientSessionFrameListener ) ;
+---
+Fixed code: Session session = startClient ( startSPDYServer ( serverSessionFrameListener ) , clientSessionFrameListener ) ;
+Genration:  Session session = startClient ( startSPDYServer ( serverSessionFrameListener ) ) ;
+=============
+=============
+Buggy code: return "Ill-formed command line: " + cmd ;
+---
+Fixed code: return msgHeader ( ) + "Ill-formed command line: " + cmd ;
+Genration:  return this . configuration ;
+=============
+=============
+Buggy code: mPreviousKey = key ;
+---
+Fixed code: mPreviousKey = GenericData . get ( ) . deepCopy ( mKeySchema , key ) ;
+Genration:  return null ;
+=============
+=============
+Buggy code: final SegmentInfo si = new SegmentInfo ( dir , Version . LATEST , SEGMENT , 10000 , false , codec , null , StringHelper . randomId ( ) ) ;
+---
+Fixed code: final SegmentInfo si = new SegmentInfo ( dir , Version . LATEST , SEGMENT , 10000 , false , codec , null , StringHelper . randomId ( ) , new HashMap < > ( ) ) ;
+Genration:  final RebootCommand command = new SegmentInfo ( dir , Version . LATEST , true , - 1 , null , true , true , null , null , null ) ;
+=============
+=============
+Buggy code: if ( s . length ( ) == 0 ) return null ;
+---
+Fixed code: if ( s . isEmpty ( ) ) return null ;
+Genration:  if ( name . length ( ) ) ;
+=============
+=============
+Buggy code: Utils . writeLog ( exceptions . get ( j ) , pigContext . getProperties ( ) . getProperty ( "pig.logfile" ) , log , false , headerMessage , false , false ) ;
+---
+Fixed code: LogUtils . writeLog ( exceptions . get ( j ) , pigContext . getProperties ( ) . getProperty ( "pig.logfile" ) , log , false , headerMessage , false , false ) ;
+Genration:  . class . getName ( ) ,
+=============
+=============
+Buggy code: buf . append ( " header: " + header ) ;
+---
+Fixed code: buf . append ( " headers: " + headers ) ;
+Genration:  . get ( proto . getFlags ( ) ) ;
+=============
+=============
+Buggy code: && statsObj . getColType ( ) . equals ( newCol . getType ( ) ) ) {
+---
+Fixed code: && statsObj . getColType ( ) . equalsIgnoreCase ( newCol . getType ( ) ) ) {
+Genration:  && ! . ( ) . equals ( type ) ) {
+=============
+=============
+Buggy code: WebElement plotImg = ( new WebDriverWait ( driver_ , 5 ) )
+---
+Fixed code: ( new WebDriverWait ( driver_ , 5 ) )
+Genration:  new File ( new HiveConf ( conf ) ) ,
+=============
+=============
+Buggy code: for ( String s : l ) {
+---
+Fixed code: if ( l != null ) for ( String s : l ) {
+Genration:  for ( String element : reader . length ) {
+=============
+=============
+Buggy code: HTable table = new HTable ( tableName ) ;
+---
+Fixed code: HTable table = new HTable ( this . conf , tableName ) ;
+Genration:  table = new HTable ( this . conf , tableName ) ;
+=============
+=============
+Buggy code: throw new KryoException ( "Buffer underflow" ) ;
+---
+Fixed code: throw new KryoException ( new EOFException ( "No more bytes left." ) ) ;
+Genration:  throw new IllegalStateException ( new + ( ) ) ;
+=============
+=============
+Buggy code: return vertexGroupInfo != null ;
+---
+Fixed code: return isVertexGroup ;
+Genration:  return equals . type ;
+=============
+=============
+Buggy code: QueryParserUtils . attachStorePlan ( currDAG . lp , "fakefile" , null , currDAG . getOperator ( alias ) ,
+---
+Fixed code: QueryParserUtils . attachStorePlan ( scope , currDAG . lp , "fakefile" , null , currDAG . getOperator ( alias ) ,
+Genration:  new ProcessorDescriptor ( blobServer , FlinkUserCodeClassLoaders . ResolveOrder . CHILD_FIRST , new String [ 0 ] ,
+=============
+=============
+Buggy code: return this == STANDARD_SAVEPOINT ;
+---
+Fixed code: return savepoint ;
+Genration:  return this ;
+=============
+=============
+Buggy code: } else {
+---
+Fixed code: } else {
+Genration:  } else if ( key instanceof Text ) {
+=============
+=============
+Buggy code: fieldName = mapper . names ( ) . indexName ( ) ;
+---
+Fixed code: fieldName = mapper . fieldType ( ) . names ( ) . indexName ( ) ;
+Genration:  JSONObject json = jsonOutput ? new JSONObject ( new LinkedHashMap < > ( ) ) : null ;
+=============
+=============
+Buggy code: } if ( field . equals ( "score" ) ) {
+---
+Fixed code: } else if ( field . equals ( "score" ) ) {
+Genration:  } else if ( ! StringUtils . lang ( " ) ) {
+=============
+=============
+Buggy code: exchange . setIn ( new MailMessage ( message ) ) ;
+---
+Fixed code: exchange . setIn ( new MailMessage ( message , getConfiguration ( ) . isMapMailMessage ( ) ) ) ;
+Genration:  exchange . setProperty ( Exchange . CHARSET_NAME , IOConverter . normalizeCharset ( charset ) ) ;
+=============
+=============
+Buggy code: OException . wrapException ( new OConfigurationException (
+---
+Fixed code: throw OException . wrapException ( new OConfigurationException (
+Genration:  throw new IOException (
+=============
+=============
+Buggy code: if ( rootElements == null ) {
+---
+Fixed code: if ( rootElements == null || rootElements . isEmpty ( ) ) {
+Genration:  if ( ! isDeterministicUdf ( udf , newExprs ) ) {
+=============
+=============
+Buggy code: return false ;
+---
+Fixed code: return true ;
+Genration:  return this ;
+=============
+=============
+Buggy code: ret . bytes = MISSING ;
+---
+Fixed code: ret . bytes = BytesRef . EMPTY_BYTES ;
+Genration:  name . value = Boolean . valueOf ( key ) ;
+=============
+=============
+Buggy code: thread . init ( new MetaStoreThread . BooleanPointer ( ) ) ;
+---
+Fixed code: thread . init ( new MetaStoreThread . BooleanPointer ( ) , new MetaStoreThread . BooleanPointer ( ) ) ;
+Genration:  . get ( get ( ) ) ;
+=============
+=============
+Buggy code: for ( Entry < String , String > entry : conf ) {
+---
+Fixed code: for ( Entry < String , String > entry : new Configuration ( conf ) ) {
+Genration:  while ( ( doc = context . call ) > 0 ) {
+=============
+=============
+Buggy code: notSupportedOnClient ( ) ;
+---
+Fixed code: throw notSupportedOnClient ( ) ;
+Genration:  throw notSupportedOnClient ( ) ;
+=============
+=============
+Buggy code: vpnFwRule . getSourcePortStart ( ) + " as a part of vpn cleanup" ) ;
+---
+Fixed code: vpnFwRule . getSourcePortStart ( ) . intValue ( ) + " as a part of vpn cleanup" ) ;
+Genration:  . write ( new ( ) ) ;
+=============
+=============
+Buggy code: producerServicePool . start ( ) ;
+---
+Fixed code: startServices ( producerServicePool ) ;
+Genration:  . write ( new ( ) ) ;
+=============
+=============
+Buggy code: false , additionalHeaders ) ;
+---
+Fixed code: false , additionalHeaders , null ) ;
+Genration:  true , true ) ;
+=============
+=============
+Buggy code: if ( fname != null ) {
+---
+Fixed code: if ( ! fname . isEmpty ( ) ) {
+Genration:  if ( ! <= ( ) ) {
+=============
+=============
+Buggy code: if ( i % SPILL_SAMPLE_FREQUENCY == 0 ) {
+---
+Fixed code: if ( t != null && i % SPILL_SAMPLE_FREQUENCY == 0 ) {
+Genration:  if ( ! conf . isEmpty ( ) ) {
+=============
+=============
+Buggy code: commandLine . addArgument ( "ClientPath" ) ;
+---
+Fixed code: commandLine . addArgument ( componentGroup ) ;
+Genration:  . class . equals ( key ) ) ;
+=============
+=============
+Buggy code: checkType ( it , AtomType . DTM ) ;
+---
+Fixed code: new Dtm ( ( Date ) checkType ( it , AtomType . DTM ) ) ;
+Genration:  new DDLWork ( ( Date ) null ) ;
+=============
+=============
+Buggy code: content = exchange . getContext ( ) . getTypeConverter ( ) . mandatoryConvertTo ( byte [ ] . class , file . getFile ( ) ) ;
+---
+Fixed code: content = exchange . getContext ( ) . getTypeConverter ( ) . mandatoryConvertTo ( byte [ ] . class , exchange , file . getFile ( ) ) ;
+Genration:  Project key = exchange . getContext ( ) . getTypeConverter ( ) . convertTo ( type , exchange , body ) ;
+=============
+=============
+Buggy code: pool = new DBBPool ( ) ;
+---
+Fixed code: pool = new NetworkDBBPool ( ) ;
+Genration:  DefaultParser parser = new DefaultParser ( ) ;
+=============
+=============
+Buggy code: loadTableWork . add ( new loadTableDesc ( fromURI . toString ( ) , Utilities . getTableDesc ( ts . tableHandle ) ,
+---
+Fixed code: loadTableWork . add ( new loadTableDesc ( fromURI . toString ( ) , getTmpFileName ( ) , Utilities . getTableDesc ( ts . tableHandle ) ,
+Genration:  new add ( new TranslateGraphIds < LongValue , IntValue , NullValue , NullValue , NullValue , NullValue , NullValue , NullValue ,
+=============
+=============
+Buggy code: origin = null ;
+---
+Fixed code: origin = getOriginForMediaDevice ( mediaDevice ) ;
+Genration:  origin = getOriginForMediaDevice ( device ) ;
+=============
+=============
+Buggy code: super ( streams , sourceContext , runtimeContext , configProps , deserializationSchema ) ;
+---
+Fixed code: super ( streams , sourceContext , runtimeContext , configProps , deserializationSchema , DEFAULT_SHARD_ASSIGNER ) ;
+Genration:  super ( outDir , logDir , miniMr , null , false , false ) ;
+=============
+=============
+Buggy code: protected Reader initReader ( Reader reader ) {
+---
+Fixed code: protected Reader initReader ( String fieldName , Reader reader ) {
+Genration:  protected Reader initReader ( String fieldName , Reader reader ) {
+=============
+=============
+Buggy code: LOG . warn ( "Failed seekBefore " + Bytes . toString ( this . splitkey ) , e ) ;
+---
+Fixed code: LOG . warn ( "Failed seekBefore " + Bytes . toStringBinary ( this . splitkey ) , e ) ;
+Genration:  LOG . warn ( "Going to close region " + sourceTask . remoteServerInformation ( ) , e ) ;
+=============
+=============
+Buggy code: MetaScanner . metaScan ( server . getConfiguration ( ) , visitor , tableName ) ;
+---
+Fixed code: MetaScanner . metaScan ( server . getConfiguration ( ) , null , visitor , tableName ) ;
+Genration:  ;
+=============
+=============
+Buggy code: useLlapIo = ( ( LlapAwareSplit ) split ) . canUseLlapIo ( ) ;
+---
+Fixed code: useLlapIo = ( ( LlapAwareSplit ) split ) . canUseLlapIo ( job ) ;
+Genration:  context = context . getHBaseIntegrationTestingUtility ( ) . getHBaseAdmin ( ) ;
+=============
+=============
+Buggy code: if ( info != null && info . isRunning ( ) ) {
+---
+Fixed code: if ( info != null ) {
+Genration:  if ( info != null && info . size ( ) == 0 ) {
+=============
+=============
+Buggy code: while ( ! docSpansOrdered ( subSpans [ i - 1 ] , subSpans [ i ] ) ) {
+---
+Fixed code: while ( ! docSpansOrderedNonOverlap ( subSpans [ i - 1 ] , subSpans [ i ] ) ) {
+Genration:  if ( ! ( ( long ) ! ( long ) || ! mode . length && ( long ) ) ) {
+=============
+=============
+Buggy code: eq ( ReplaceIfPresentFlag . REPLACE ) , eq ( new GeneralDataCoding ( false , true , MessageClass . CLASS1 , Alphabet . ALPHA_DEFAULT ) ) , eq ( ( byte ) 0 ) , aryEq ( "short message body" . getBytes ( ) ) ,
+---
+Fixed code: eq ( ReplaceIfPresentFlag . REPLACE ) , eq ( DataCoding . newInstance ( ( byte ) 0 ) ) , eq ( ( byte ) 0 ) , aryEq ( "short message body" . getBytes ( ) ) ,
+Genration:  ( region . getName ( ) . toLowerCase ( ) ,
+=============
+=============
+Buggy code: statement = dbConn . createStatement ( ResultSet . TYPE_SCROLL_INSENSITIVE , ResultSet . CONCUR_READ_ONLY ) ;
+---
+Fixed code: statement = dbConn . createStatement ( resultSetType , resultSetConcurrency ) ;
+Genration:  , scanner , this . conf . getConfiguration ( ) . equals ( fs , true ) ) ;
+=============
+=============
+Buggy code: Bitmap bmp = RenderingIcons . getIcon ( context , resId ) ;
+---
+Fixed code: Bitmap bmp = RenderingIcons . getIcon ( context , resId , true ) ;
+Genration:  = _context . getVar ( ConfVars . HIVE_EXECUTION_ENGINE ) . equals ( "tez" ) ) ;
+=============
+=============
+Buggy code: Table dest3 = db . getTable ( "dest3" ) ;
+---
+Fixed code: Table dest3 = db . getTable ( MetaStoreUtils . DEFAULT_DATABASE_NAME , "dest3" ) ;
+Genration:  DefaultParser parser = new DefaultParser ( ) ;
+=============
+=============
+Buggy code: this . rpcTimeout = conf . getLong ( "hbase.regionserver.lease.period" , 60000 ) ;
+---
+Fixed code: this . rpcTimeout = conf . getLong ( HBASE_REGIONSERVER_LEASE_PERIOD_KEY , DEFAULT_HBASE_REGIONSERVER_LEASE_PERIOD ) ;
+Genration:  this . fs = conf . getLong ( HBASE_REGIONSERVER_LEASE_PERIOD_KEY , DEFAULT_HBASE_REGIONSERVER_LEASE_PERIOD ) ;
+=============
+=============
+Buggy code: Source source = conv . toSource ( "<foo>bar</foo>" . getBytes ( ) ) ;
+---
+Fixed code: Source source = conv . toBytesSource ( "<foo>bar</foo>" . getBytes ( ) ) ;
+Genration:  InputStream is = exchange . getContext ( ) . getTypeConverter ( ) . convertTo ( type ) ;
+=============
+=============
+Buggy code: Service service = getKubernetes ( ) . getService ( idText ) ;
+---
+Fixed code: Service service = getKubernetes ( ) . services ( ) . inNamespace ( getNamespace ( ) ) . withName ( idText ) . get ( ) ;
+Genration:  this . = ( RouterContext ) I2PAppContext . getGlobalContext ( ) ;
+=============
+=============
+Buggy code: logger . info ( "Scanning for projects..." ) ;
+---
+Fixed code: logger . info ( ansi ( ) . fgBlue ( ) . a ( "Scanning for projects..." ) . reset ( ) . toString ( ) ) ;
+Genration:  logger . info ( ansi ( ) . fgYellow ( ) . a ( message ) . reset ( ) . toString ( ) ) ;
+=============
+=============
+Buggy code: getTableName ( ) , getScan ( ) . getStartRow ( ) , getScan ( ) ) ;
+---
+Fixed code: getTableName ( ) , getScan ( ) ) ;
+Genration:  ( ) . put ( DateHistogramInterval . MONTH ) , name ) ;
+=============
+=============
+Buggy code: return failure ( e , "unexpected error: " + e . getMessage ( ) ) ;
+---
+Fixed code: failure ( "unexpected error" , e ) ;
+Genration:  return factory . fun ( IOHelper . buffered ( _context ) , IOHelper . getCharsetName ( exchange , false ) ) ;
+=============
+=============
+Buggy code: closeOutagesForUnmanagedServices ( ) ;
+---
+Fixed code: m_queryManager . closeOutagesForUnmanagedServices ( ) ;
+Genration:  if ( myTokenType != null ) ;
+=============
+=============
+Buggy code: File oldConf = new File ( System . getProperty ( "user.home" ) + "/pigtest/conf/hadoop-site.xml" ) ;
+---
+Fixed code: File oldConf = new File ( "build/classes/hadoop-site.xml" ) ;
+Genration:  File path = new File ( "" ) . instantiateCacheManager ( ) ;
+=============
+=============
+Buggy code: null , null , NetworkType . Basic , null , null , true , true ) ;
+---
+Fixed code: null , null , NetworkType . Basic , null , null , true , true , null , null ) ;
+Genration:  null , null , NetworkType . Basic , null , true , true , null , null ) ;
+=============
+=============
+Buggy code: long val = encode ( fromBs ) ;
+---
+Fixed code: long val = encode ( fromBs , value . length - n . getLength ( ) + first ) ;
+Genration:  long now = 1L << 10 ;
+=============
+=============
+Buggy code: public Object process ( Node nd , NodeProcessorCtx ctx , Object ... nodeOutputs ) throws SemanticException {
+---
+Fixed code: public Object process ( Node nd , Stack < Node > stack , NodeProcessorCtx ctx , Object ... nodeOutputs ) throws SemanticException {
+Genration:  public Object process ( Node nd , Stack < Node > stack , NodeProcessorCtx ctx , Object ... nodeOutputs ) throws SemanticException {
+=============
+=============
+Buggy code: final SlaveContext context = readSlaveContext ( buffer ) ;
+---
+Fixed code: SlaveContext context = type . includesSlaveContext ( ) ? readSlaveContext ( buffer ) : null ;
+Genration:  final RebootCommand command = null ;
+=============
+=============
+Buggy code: if ( expr . getUnboxed ( ) && operator . isOptimisable ( expr , this ) ) {
+---
+Fixed code: if ( operator . getOptimisationStrategy ( expr , this ) . useJavaOperator ( ) ) {
+Genration:  if ( ! regionInfo . isMetaTable ( ) ) {
+=============
+=============
+Buggy code: this . docValueType = ref . docValueType ( ) ;
+---
+Fixed code: this . docValuesType = ref . docValuesType ( ) ;
+Genration:  this . query = searcher . getSimilarity ( needsScores ) ;
+=============
+=============
+Buggy code: MetricDto metric = dbClient . metricDao ( ) . selectById ( dbSession , customMeasure . getMetricId ( ) ) ;
+---
+Fixed code: MetricDto metric = dbClient . metricDao ( ) . selectOrFailById ( dbSession , customMeasure . getMetricId ( ) ) ;
+Genration:  , rule = _firewallService . findByIdIncludingRemoved ( vm . getVirtualMachine ( ) . getGuestOSId ( ) ) ;
+=============
+=============
+Buggy code: NodeUtil rootTree = new NodeUtil ( root . getTree ( "/" ) ) ;
+---
+Fixed code: NodeUtil rootTree = checkNotNull ( new NodeUtil ( root . getTree ( "/" ) ) ) ;
+Genration:  cacheManager = new DefaultCacheManagerFactory ( ) . instantiateCacheManager ( ) ;
+=============
+=============
+Buggy code: result . bytes = MISSING ;
+---
+Fixed code: result . bytes = BytesRef . EMPTY_BYTES ;
+Genration:  result . result = Boolean . valueOf ( result ) ;
+=============
+=============
+Buggy code: if ( halfReader != null ) halfReader . close ( ) ;
+---
+Fixed code: if ( halfReader != null ) halfReader . close ( cacheConf . shouldEvictOnClose ( ) ) ;
+Genration:  if ( ! this . HIVE_EXECUTION_ENGINE . isEmpty ( ) ) ) {
+=============
+=============
+Buggy code: s_logger . warn ( "Field " + columnName + " doesn't exist in " + tableName , e ) ;
+---
+Fixed code: s_logger . debug ( "Field " + columnName + " doesn't exist in " + tableName + " ignoring exception: " + e . getMessage ( ) ) ;
+Genration:  + new IOException ( e . getMessage ( ) , e ) ;
+=============
+=============
+Buggy code: this . __test_dir = new File ( TEMP_DIR , "testIndexWriter" ) ;
+---
+Fixed code: this . __test_dir = _TestUtil . getTempDir ( "testIndexWriter" ) ;
+Genration:  this . new File ( path , random ( ) ) ;
+=============
+=============
+Buggy code: protected Reader initReader ( Reader reader ) {
+---
+Fixed code: protected Reader initReader ( String fieldName , Reader reader ) {
+Genration:  protected Reader initReader ( String fieldName , Reader reader ) {
+=============
+=============
+Buggy code: Set < ServerName > deadServers = master . getServerManager ( ) . getDeadServers ( ) ;
+---
+Fixed code: Set < ServerName > deadServers = master . getServerManager ( ) . getDeadServers ( ) . copyServerNames ( ) ;
+Genration:  List < Class < ? extends Serializable > > = ( ) ;
+=============
+=============
+Buggy code: userNameFromPrincipal = getUserNameFromPrincipal ( principal ) ;
+---
+Fixed code: userNameFromPrincipal = LlapUtil . getUserNameFromPrincipal ( principal ) ;
+Genration:  answer = null ;
+=============
+=============
+Buggy code: final int finalOffset = offset ;
+---
+Fixed code: final int finalOffset = correctOffset ( offset ) ;
+Genration:  final int type = null ;
+=============
+=============
+Buggy code: return this . comparator1 . equalToReference ( candidate . < K > getField ( 0 ) ) ;
+---
+Fixed code: return this . comparator1 . equalToReference ( candidate . < K > getFieldNotNull ( 0 ) ) ;
+Genration:  return this . comparator . compare ( candidate . < K > getFieldNotNull ( 0 ) ) ;
+=============
+=============
+Buggy code: syncDLObjects , repositoryId ) ;
+---
+Fixed code: syncDLObjects , companyId , repositoryId ) ;
+Genration:  hConfFile , cConfFile , eventHandler ) ) ;
+=============
+=============
+Buggy code: super . evaluateIfConditionalExpr ( batch , childExpressions ) ;
+---
+Fixed code: super . evaluateChildren ( batch ) ;
+Genration:  super . jobCloseOp ( jc , null ) ;
+=============
+=============
+Buggy code: ! lastTryRetrievedCheckpoints . equals ( retrievedCheckpoints ) ) ;
+---
+Fixed code: ! CompletedCheckpoint . checkpointsMatch ( lastTryRetrievedCheckpoints , retrievedCheckpoints ) ) ;
+Genration:  if ( ! this . HIVE_EXECUTION_ENGINE . ( ) == 0 ) ;
+=============
+=============
+Buggy code: return delegate . mustRefreshDynamicVersion ( selector , moduleId , ageMillis ) ;
+---
+Fixed code: return false ;
+Genration:  return new Message ( name , null , null ) ;
+=============
+=============
+Buggy code: LOG . info ( "Loaded filter classes :" + filterClasses ) ;
+---
+Fixed code: LOG . info ( "Loaded filter classes :" + Arrays . toString ( filterClasses ) ) ;
+Genration:  LOG . info ( e ) ;
+=============
+=============
+Buggy code: this . registry = new TestNodeRegistry ( addressMap . values ( ) ) ;
+---
+Fixed code: this . registry = new TestNodeRegistry ( Collections . unmodifiableCollection ( addressMap . values ( ) ) ) ;
+Genration:  this . new query ( ) ;
+=============
+=============
+Buggy code: SearchContext . setCurrent ( new DefaultSearchContext ( 0 , new ShardSearchRequest ( ) . types ( request . types ( ) ) , null ,
+---
+Fixed code: SearchContext . setCurrent ( new DefaultSearchContext ( 0 , new ShardSearchRequest ( ) . types ( request . types ( ) ) . nowInMillis ( request . nowInMillis ( ) ) , null ,
+Genration:  new File ( new File ( new File ( new File ( new Term ( new Term ( new HiveConf ( conf ) ) ) ,
+=============
+=============
+Buggy code: setNumLabel ( orig . getNumLabel ( ) ) ;
+---
+Fixed code: setNumLabel ( 0 ) ;
+Genration:  ( ( BigDecimal ) getJavaFacet ( ) ) . to (
+=============
+=============
+Buggy code: sink . invoke ( value ) ;
+---
+Fixed code: sink . invoke ( value , SinkContextUtil . forTimestamp ( 0 ) ) ;
+Genration:  . write ( i ) ;
+=============
+=============
+Buggy code: return true ;
+---
+Fixed code: return false ;
+Genration:  return nextKeyValue ( ) ;
+=============
+=============
+Buggy code: result . addUnique ( proxies . createTypeReference ( BinarySignatures . createTypeSignature ( interfaceName ) , typeParameters ) ) ;
+---
+Fixed code: result . addUnique ( proxies . createTypeReference ( BinarySignatures . createObjectTypeSignature ( interfaceName ) , typeParameters ) ) ;
+Genration:  result . set ( t0 . compareTo ( t1 ) , result ) ;
+=============
+=============
+Buggy code: HConnectionManager . deleteConnection ( conf ) ;
+---
+Fixed code: HConnectionManager . deleteConnectionInfo ( conf ) ;
+Genration:  fs . createFile ( true ) ;
+=============
+=============
+Buggy code: assertEquals ( slurped . trim ( ) , output . trim ( ) ) ;
+---
+Fixed code: assertEquals ( slurped . trim ( ) , output . replace ( "\r" , "" ) . trim ( ) ) ;
+Genration:  assertEquals ( "MyScheduler-" + context . getName ( ) . toLowerCase ( ) , e ) ;
+=============
+=============
+Buggy code: if ( authManager instanceof SAML2AuthManager ) {
+---
+Fixed code: if ( authManager != null && authManager instanceof SAML2AuthManager ) {
+Genration:  if ( value != null ) {
+=============
+=============
+Buggy code: this . expression = expression ;
+---
+Fixed code: this . orderExpressions = orderExpressions ;
+Genration:  this . table = new ( ) ;
+=============
+=============
+Buggy code: Table tbl = getTable ( tableName ) ;
+---
+Fixed code: Table tbl = getTable ( MetaStoreUtils . DEFAULT_DATABASE_NAME , tableName ) ;
+Genration:  Tokenizer dir = getClient ( line , program . getUserCodeClassLoader ( ) ) ;
+=============
+=============
+Buggy code: final StandardTokenizer input = new StandardTokenizer ( TEST_VERSION_CURRENT ) ;
+---
+Fixed code: final StandardTokenizer input = new StandardTokenizer ( TEST_VERSION_CURRENT , newAttributeFactory ( ) ) ;
+Genration:  final input == new input ( null , - 1 ) ;
+=============
+=============
+Buggy code: DefaultInputFile inputFile = new DefaultInputFile ( "foo" , "src/foo.xoo" ) . setLanguage ( "xoo" ) ;
+---
+Fixed code: DefaultInputFile inputFile = new DefaultInputFile ( "foo" , "src/foo.xoo" ) . setLanguage ( "xoo" ) . setLines ( 10 ) ;
+Genration:  DefaultInputFile inputFile = new DefaultInputFile ( "foo" , "src/foo.xoo" ) . setLanguage ( "xoo" ) . setLines ( 10 ) ;
+=============
+=============
+Buggy code: this . isIncrementalDump = false ;
+---
+Fixed code: this . specType = Type . DEFAULT ;
+Genration:  this . true = new ( ) ;
+=============
+=============
+Buggy code: int hash = 1 ;
+---
+Fixed code: int hash = 17 ;
+Genration:  int insertionPoint = new float [ 0 ] ;
+=============
+=============
+Buggy code: if ( vm . getType ( ) == VirtualMachine . Type . User ) {
+---
+Fixed code: if ( vm . getType ( ) == VirtualMachine . Type . User || vm . getType ( ) == VirtualMachine . Type . DomainRouter ) {
+Genration:  if ( ! regionInfo . isMetaTable ( ) ) {
+=============
+=============
+Buggy code: TagCompressionContext context = new TagCompressionContext ( LRUDictionary . class ) ;
+---
+Fixed code: TagCompressionContext context = new TagCompressionContext ( LRUDictionary . class , Byte . MAX_VALUE ) ;
+Genration:  Object context = new PigServer ( ( ) . instantiateCacheManager ( ) ;
+=============
+=============
+Buggy code: unquotedCsvPreference = new CsvPreference . Builder ( '\0' , separator , "" ) . build ( ) ;
+---
+Fixed code: unquotedCsvPreference = getUnquotedCsvPreference ( separator ) ;
+Genration:  group = new DefaultCacheManagerFactory ( ) . instantiateCacheManager ( ) ;
+=============
+=============
+Buggy code: List < HiveLock > locks = getLocks ( conf , zkpClient , null , parent ) ;
+---
+Fixed code: List < HiveLock > locks = getLocks ( conf , zkpClient , null , parent , false , false ) ;
+Genration:  List < String > list = ( List < CollectionRecord > ) getOrCreateCollectionWrapper ( ) . getCollection ( ) ;
+=============
+=============
+Buggy code: Assert . assertThat ( "Close Code" , closeCode , is ( expectedCode ) ) ;
+---
+Fixed code: Assert . assertThat ( "Close Code / Received [" + closeMessage + "]" , closeCode , is ( expectedCode ) ) ;
+Genration:  Assert . assertEquals ( i , conf , id , this . hiveConf ) ;
+=============
+=============
+Buggy code: protected Reader initReader ( Reader reader ) {
+---
+Fixed code: protected Reader initReader ( String fieldName , Reader reader ) {
+Genration:  protected Reader initReader ( String fieldName , Reader reader ) {
+=============
+=============
+Buggy code: shotMesh . render ( GL10 . GL_TRIANGLES ) ;
+---
+Fixed code: shotMesh . render ( ) ;
+Genration:  . render ( ) ;
+=============
+=============
+Buggy code: this . table . setAutoFlush ( false ) ;
+---
+Fixed code: this . table . setAutoFlush ( false , true ) ;
+Genration:  this . table . setAutoFlush ( false , true ) ;
+=============
+=============
+Buggy code: componentBinaries . addAll ( component . getBinaries ( ) ) ;
+---
+Fixed code: componentBinaries . addAll ( component . getBinaries ( ) . values ( ) ) ;
+Genration:  . get ( d . get ( ) ) ;
+=============
+=============
+Buggy code: TestStartRequest startRequest = new TestStartRequest ( profile , testHandle , jira , patch ) ;
+---
+Fixed code: TestStartRequest startRequest = new TestStartRequest ( profile , testHandle , jira , patch , clearLibraryCache ) ;
+Genration:  , false , new long [ ] { 0 , 1 } , null ) ;
+=============
+=============
+Buggy code: createWithParents ( zkw , znode ) ;
+---
+Fixed code: createWithParents ( zkw , znode , data ) ;
+Genration:  return db ;
+=============
+=============
+Buggy code: return new HiveStatement ( client , sessHandle ) ;
+---
+Fixed code: return new HiveStatement ( this , client , sessHandle ) ;
+Genration:  return new Message ( new ArrayList < LongValue , Accumulator < ? extends Serializable > > ( ) ) ;
+=============
+=============
+Buggy code: Set prevSet = new HashSet < Tuple2 < Long , Long > > ( ) ;
+---
+Fixed code: Set < Tuple2 < Long , Long > > prevSet = new HashSet < Tuple2 < Long , Long > > ( ) ;
+Genration:  Task < ? > = new LinkedHashSet < WriteEntity > ( ) . iterator ( ) ;
+=============
+=============
+Buggy code: Assert . assertEquals ( KeyedOneInputStreamOperatorTestHarness . MAX_PARALLELISM , count ) ;
+---
+Fixed code: Assert . assertEquals ( MAX_PARALLELISM , count ) ;
+Genration:  Assert . assertEquals ( i , conf , context ) ;
+=============
+=============
+Buggy code: return keyId | ( ( ( long ) type . intValue ( ) ) << 24 ) | ( longValue << 28 ) ;
+---
+Fixed code: return keyId | ( ( ( long ) type . intValue ( ) ) << StandardFormatSettings . PROPERTY_TOKEN_MAXIMUM_ID_BITS ) | ( longValue << 28 ) ;
+Genration:  return ( ( BigDecimal ) o ) ;
+=============
+=============
+Buggy code: GradleLauncher launcher = gradleLauncherFactory . newInstance ( param , serviceRegistry ) ;
+---
+Fixed code: GradleLauncher launcher = gradleLauncherFactory . newInstance ( param , serviceRegistry , false ) ;
+Genration:  = FunctionRegistry . convertTo ( fs , ConfVars . HIVE_EXECUTION_ENGINE ) ;
+=============
+=============
+Buggy code: return Integer . valueOf ( value ) ;
+---
+Fixed code: return Integer . valueOf ( value ) . intValue ( ) ;
+Genration:  return StringUtils . defaultIfEmpty ( AppWithMapReduce + getEmail ( ) , getServerFromAddress ( ) ) ;
+=============
+=============
+Buggy code: RuntimeUDFContext ctx = new RuntimeUDFContext ( "test name" , 3 , 1 , getClass ( ) . getClassLoader ( ) , new ExecutionConfig ( ) , new HashMap < String , Accumulator < ? , ? > > ( ) ) ;
+---
+Fixed code: RuntimeUDFContext ctx = new RuntimeUDFContext ( "test name" , 3 , 1 , getClass ( ) . getClassLoader ( ) , new ExecutionConfig ( ) , new HashMap < String , Future < Path > > ( ) , new HashMap < String , Accumulator < ? , ? > > ( ) ) ;
+Genration:  libCache = new BlobLibraryCacheManager ( cache , FlinkUserCodeClassLoaders . ResolveOrder . CHILD_FIRST , new String [ 0 ] , new String [ 0 ] , new String [ 0 ] , new int [ ] { 0 , new int [ ] { 1 } , new int [ ] { 1 } , new int [ ] { 1 } , new
+=============
+=============
+Buggy code: curIndex = setIndexOnLRInSplit ( index , spl ) ;
+---
+Fixed code: curIndex = setIndexOnLRInSplit ( index , spl , sameKeyType ) ;
+Genration:  answer = ;
+=============
+=============
+Buggy code: if ( input == null || input . size ( ) == 0 )
+---
+Fixed code: if ( input == null || input . size ( ) == 0 || input . get ( 0 ) == null )
+Genration:  if ( input == null || input . size ( ) == 0 || input . get ( 0 ) == null )
+=============
+=============
+Buggy code: newIndexWriterConfig ( TEST_VERSION_CURRENT , new MockAnalyzer ( MockTokenizer . WHITESPACE , false ) ) ) ;
+---
+Fixed code: newIndexWriterConfig ( TEST_VERSION_CURRENT , new MockAnalyzer ( random , MockTokenizer . WHITESPACE , false ) ) ) ;
+Genration:  newIndexWriterConfig ( TEST_VERSION_CURRENT , new MockAnalyzer ( random , MockTokenizer . WHITESPACE , false ) ) ) ;
+=============
+=============
+Buggy code: document . setText ( myHunks . get ( 0 ) . getText ( ) ) ;
+---
+Fixed code: document . setText ( getNewFileText ( ) ) ;
+Genration:  . class . getName ( ) . equals ( name ) ) ;
+=============
+=============
+Buggy code: HiveConf . getBoolVar ( jobConf , ConfVars . HIVE_OPTIMIZE_TEZ ) ?
+---
+Fixed code: HiveConf . getVar ( jobConf , ConfVars . HIVE_EXECUTION_ENGINE ) . equals ( "tez" ) ?
+Genration:  HiveConf . ConfVars . purgeByCacheKey ( HiveConf . ConfVars . fs , true ) ) ;
+=============
+=============
+Buggy code: + "('s1:int, s2:int, s3:long, s4:float, s5:string, s6:bytes', '[s1, s2]; [s3, s4]')" ) ;
+---
+Fixed code: + "('[s1, s2]; [s3, s4]')" ) ;
+Genration:  + "('[s1, s2]; [s3, s4]')" ) ;
+=============
+=============
+Buggy code: . setContext ( MetricsUtils . METRICS_CONTEXT )
+---
+Fixed code: . setContext ( "executors" )
+Genration:  . addChangeset ( newChangeSetBuilder ( )
+=============
+=============
+Buggy code: checkForErrors ( withJsLibAdded ( files , config ) , bindingContext ) ;
+---
+Fixed code: checkForErrors ( Config . withJsLibAdded ( files , config ) , bindingContext ) ;
+Genration:  ( ( StructObjectInspector ) o ) . signum ( ) ;
+=============
+=============
+Buggy code: t . setAutoFlush ( false ) ;
+---
+Fixed code: t . setAutoFlush ( false , true ) ;
+Genration:  + db . false ) ;
+=============
+=============
+Buggy code: public int ordValue ( ) {
+---
+Fixed code: public int ordValue ( ) throws IOException {
+Genration:  public int size ( ) {
+=============
+=============
+Buggy code: this . setOwner ( user . getShortName ( ) ) ;
+---
+Fixed code: this . setOwner ( user ) ;
+Genration:  this . addAbility ( ( ) ) ;
+=============
+=============
+Buggy code: if ( EndpointHelper . matchEndpoint ( uri , intercept . getUri ( ) ) ) {
+---
+Fixed code: if ( EndpointHelper . matchEndpoint ( context , uri , intercept . getUri ( ) ) ) {
+Genration:  if ( ( ( long ) <= ( ) ) . length ( ) ) {
+=============
+=============
+Buggy code: xpath = XPathCache . getXPathExpression ( context , wrapper , config . getExpression ( ) , config . getNamespaces ( ) , null , null , baseURI ) ;
+---
+Fixed code: xpath = XPathCache . getXPathExpression ( context , wrapper , config . getExpression ( ) , config . getNamespaces ( ) , null , null , baseURI , locationData ) ;
+Genration:  , false = ;
+=============
+=============
+Buggy code: GatewayRetriever < T > leaderRetriever ,
+---
+Fixed code: GatewayRetriever < ? extends T > leaderRetriever ,
+Genration:  arguments [ i ] = ( long ) == 0 ) ;
+=============
+=============
+Buggy code: return false ;
+---
+Fixed code: return true ;
+Genration:  return this ;
+=============
+=============
+Buggy code: "AA:AA:BB:BB:CC:CC" , "127.0.0.1" ) ;
+---
+Fixed code: TEST_MAC , "127.0.0.1" ) ;
+Genration:  catalogTracker , assignmentManager ) ;
+=============
+=============
+Buggy code: segmentInfo = new SegmentInfo ( directoryOrig , Version . LATEST , segmentName , - 1 , false , codec , null , StringHelper . randomId ( ) ) ;
+---
+Fixed code: segmentInfo = new SegmentInfo ( directoryOrig , Version . LATEST , segmentName , - 1 , false , codec , null , StringHelper . randomId ( ) , new HashMap < > ( ) ) ;
+Genration:  , fetchResults = new GeoStandardCircle ( 0 , 1 , 1 , getClass ( ) . intValue ( ) , new HashMap < > ( ) ) ;
+=============
+=============
+Buggy code: response . sendRedirect ( target ) ;
+---
+Fixed code: response . sendRedirect ( response . encodeRedirectURL ( target ) ) ;
+Genration:  return ( ) . equals ( key ) ;
+=============
+=============
+Buggy code: String v = p . getText ( ) ;
+---
+Fixed code: String v = p . getCurrentToken ( ) == JsonToken . VALUE_NULL ? null : p . getText ( ) ;
+Genration:  String value = value . toString ( ) ;
+=============
+=============
+Buggy code: TEST_VERSION_CURRENT , new MockAnalyzer ( MockTokenizer . SIMPLE , true , MockTokenFilter . ENGLISH_STOPSET , true ) ) ) ;
+---
+Fixed code: TEST_VERSION_CURRENT , new MockAnalyzer ( random , MockTokenizer . SIMPLE , true , MockTokenFilter . ENGLISH_STOPSET , true ) ) ) ;
+Genration:  new BlobLibraryCacheManager ( new File ( new HiveConf ( new HiveConf ( conf , conf ) , conf , true ) , null , true ) ) ;
+=============
+=============
+Buggy code: this . stagingDir = FileLocalizer . getTemporaryPath ( pigContext , "-tez-resource" ) ; ;
+---
+Fixed code: this . stagingDir = ( ( HPath ) FileLocalizer . getTemporaryResourcePath ( pigContext ) ) . getPath ( ) ;
+Genration:  this . fs = conf . getLong ( HBASE_REGIONSERVER_LEASE_PERIOD_KEY , DEFAULT_HBASE_REGIONSERVER_LEASE_PERIOD ) ;
+=============
+=============
+Buggy code: GithubUtil . accessToGithubWithModalProgress ( project , new ThrowableComputable < Boolean , IOException > ( ) {
+---
+Fixed code: GithubUtil . accessToGithubWithModalProgress ( project , settings . getHost ( ) , new ThrowableComputable < Boolean , IOException > ( ) {
+Genration:  . setLog ( new Runnable ( 0 , new Runnable ( ) ) ) {
+=============
+=============
+Buggy code: loadFileWork . add ( new LoadFileDesc ( queryTmpdir , destStr , isDfsDir , cols ,
+---
+Fixed code: loadFileWork . add ( new LoadFileDesc ( tblDesc , queryTmpdir , destStr , isDfsDir , cols ,
+Genration:  new add ( new TranslateGraphIds < LongValue , IntValue , NullValue , NullValue ,
+=============
+=============
+Buggy code: if ( s . equals ( elem ) ) {
+---
+Fixed code: if ( s . toLowerCase ( ) . equals ( elem ) ) {
+Genration:  if ( ! ( ) . isEmpty ( ) ) {
+=============
+=============
+Buggy code: public static Pattern SERVERNAME_PATTERN =
+---
+Fixed code: public static final Pattern SERVERNAME_PATTERN =
+Genration:  public abstract toString ( ) throws IOException ;
+=============
+=============
+Buggy code: + " Either supply one in the route definition or via the message header '%s'" , SIGNATURE_PUBLIC_KEY_OR_CERT ) ) ;
+---
+Fixed code: + " Either supply one in the route definition or via the message header '%s'" , DigitalSignatureConstants . SIGNATURE_PUBLIC_KEY_OR_CERT ) ) ;
+Genration:  + " to short: " + e ) ;
+=============
+=============
+Buggy code: throw new ForbiddenException ( "Requires administration permission" ) ;
+---
+Fixed code: throw new ForbiddenException ( "Requires system administration permission" ) ;
+Genration:  throw new IOException ( new ( ) ) ;
+=============
+=============
+Buggy code: actual = LruBlockCache . MAP_FIXED_OVERHEAD ;
+---
+Fixed code: actual = ClassSize . CONCURRENT_HASHMAP ;
+Genration:  _listener = null ;
+=============
+=============
+Buggy code: task . setObjectFileDir ( project . file ( String . valueOf ( project . getBuildDir ( ) ) + "/objs/" + binary . getNamingScheme ( ) . getOutputDirectoryBase ( ) + "/" + languageSourceSet . getProjectScopedName ( ) + "PCH" ) ) ;
+---
+Fixed code: task . setObjectFileDir ( new File ( binary . getNamingScheme ( ) . withOutputType ( "objs" ) . getOutputDirectory ( project . getBuildDir ( ) ) , languageSourceSet . getProjectScopedName ( ) + "PCH" ) ) ;
+Genration:  task . setObjectFileDir ( new File ( binary . getNamingScheme ( ) . withOutputType ( "objs" ) . getOutputDirectory ( project . getBuildDir ( ) ) ) ) ;
+=============
+=============
+Buggy code: int offset = 0 ;
+---
+Fixed code: int offset = startOffset ;
+Genration:  int insertionPoint = - 1 ;
+=============
+=============
+Buggy code: checkArgGroups ( arguments , 0 , inputTypes , NUMERIC_GROUP ) ;
+---
+Fixed code: checkArgGroups ( arguments , 0 , inputTypes , NUMERIC_GROUP , VOID_GROUP ) ;
+Genration:  runTest ( arguments , 0 , 1 , expected , 0 ) ;
+=============
+=============
+Buggy code: if ( input == null || input . size ( ) == 0 )
+---
+Fixed code: if ( input == null || input . size ( ) == 0 || input . get ( 0 ) == null )
+Genration:  if ( input == null || input . size ( ) == 0 || input . get ( 0 ) == null )
+=============
+=============
+Buggy code: mFileSystem . createFile ( new AlluxioURI ( "/a" + i ) , op ) ;
+---
+Fixed code: mFileSystem . createFile ( new AlluxioURI ( "/a" + i ) , op ) . close ( ) ;
+Genration:  . get ( get ( 0 ) , ( ( ) ) ) . process ( ) ;
+=============
+=============
+Buggy code: return port ;
+---
+Fixed code: return webServer . getConnectors ( ) [ 0 ] . getLocalPort ( ) ;
+Genration:  return this ;
+=============
+=============
+Buggy code: super ( ioEngineName , capacity , writerThreads , writerQLen , persistencePath ) ;
+---
+Fixed code: super ( ioEngineName , capacity , 8192 , writerThreads , writerQLen , persistencePath ) ;
+Genration:  super ( msg , null , false , null ) ;
+=============
+=============
+Buggy code: this . addAbility ( new EntersBattlefieldAbility ( new AddCountersSourceEffect ( CounterType . P1P1 . createInstance ( ) , numberCounters , true ) ,
+---
+Fixed code: this . addAbility ( new EntersBattlefieldAbility ( new AddCountersSourceEffect ( CounterType . P1P1 . createInstance ( 0 ) , numberCounters , true ) ,
+Genration:  this . addAbility ( new QueryState ( new SpiritWhiteToken ( ) , new HashMap < > ( ) ) ) ;
+=============
+=============
+Buggy code: capacityResponse . setCapacityUsed ( capacity . getUsedCapacity ( ) ) ;
+---
+Fixed code: capacityResponse . setCapacityUsed ( capacity . getUsedCapacity ( ) + capacity . getReservedCapacity ( ) ) ;
+Genration:  workersInZooKeeper . setCapacityUsed ( state . getId ( ) ) ;
+=============
+=============
+Buggy code: for ( SNode fieldNode : FindUtils . executeFinder ( "jetbrains.mps.baseLanguage.findUsages.OverridingFields_Finder" , node , scope , new EmptyProgressIndicator ( ) ) ) {
+---
+Fixed code: for ( SNode fieldNode : Sequence . fromIterable ( FindUtils . executeFinder ( "jetbrains.mps.baseLanguage.findUsages.OverridingFields_Finder" , node , scope , new EmptyProgressIndicator ( ) ) ) ) {
+Genration:  while ( ( doc = ( ( long ) o ) . signum ( ) , > ( ) ) {
+=============
+=============
+Buggy code: title = getCms ( ) . readProperty ( "/" , I_CmsConstants . C_PROPERTY_TITLE ) ;
+---
+Fixed code: title = getCms ( ) . readPropertyObject ( "/" , I_CmsConstants . C_PROPERTY_TITLE , false ) . getValue ( ) ;
+Genration:  = project . wrap ( vm . getVirtualMachine ( ) . getGuestOSId ( ) , false ) ;
+=============
+=============
+Buggy code: return true ;
+---
+Fixed code: return Boolean . TRUE ;
+Genration:  return nextKeyValue ( ) ;
+=============
+=============
+Buggy code: public MatchCode checkColumn ( byte [ ] bytes , int offset , int length ) ;
+---
+Fixed code: public ScanQueryMatcher . MatchCode checkColumn ( byte [ ] bytes , int offset , int length ) ;
+Genration:  void write ( Map . ConfVars . HIVE_EXECUTION_ENGINE ) . equals ( HiveConf . ConfVars . HIVE_EXECUTION_ENGINE ) ) ;
+=============
+=============
+Buggy code: ClassLoader classLoader = Thread . currentThread ( ) . getContextClassLoader ( ) ;
+---
+Fixed code: ClassLoader classLoader = SolrCLI . class . getClassLoader ( ) ;
+Genration:  = project . wrap ( vm . getVirtualMachine ( ) . getId ( ) ) ;
+=============
+=============
+Buggy code: if ( values . size ( ) == 0 ) {
+---
+Fixed code: if ( values == null || values . size ( ) == 0 ) {
+Genration:  if ( values == null || values . size ( ) == 0 ) {
+=============
+=============
+Buggy code: PrimitiveCategory commonCat = FunctionRegistry . getCommonCategory ( left , right ) ;
+---
+Fixed code: PrimitiveCategory commonCat = FunctionRegistry . getPrimitiveCommonCategory ( left , right ) ;
+Genration:  T answer = FunctionRegistry . getId ( ) ;
+=============
+=============
+Buggy code: sessionState . open ( TezSessionState . makeSessionId ( ) , newConf ) ;
+---
+Fixed code: sessionState . open ( newConf ) ;
+Genration:  ;
+=============
+=============
+Buggy code: String charset = ObjectHelper . after ( after , "=" ) ;
+---
+Fixed code: String charset = IOConverter . normalizeCharset ( ObjectHelper . after ( after , "=" ) ) ;
+Genration:  String msg = exchange . getContext ( ) . getTypeConverter ( ) . convertTo ( String . class , exchange , body ) ;
+=============
+=============
+Buggy code: schema = ( new JsonMetadata ( ) ) . getSchema ( location , job ) ;
+---
+Fixed code: schema = ( new JsonMetadata ( ) ) . getSchema ( location , job , isSchemaOn ) ;
+Genration:  ! result . equals ( conf . reader ( ) , = ( ) . = ( ) . getId ( ) ) ;
+=============
+=============
+Buggy code: query ,
+---
+Fixed code: query . toString ( ) ,
+Genration:  query
+=============
+=============
+Buggy code: String filterExpr = Utilities . serializeExpression ( node ) ;
+---
+Fixed code: String filterExpr = SerializationUtilities . serializeExpression ( node ) ;
+Genration:  String filterExpr = SerializationUtilities . serializeExpression ( node ) ;
+=============
+=============
+Buggy code: String [ ] concreteIndices = clusterState . metaData ( ) . concreteIndices ( request . indices ( ) ) ;
+---
+Fixed code: String [ ] concreteIndices = clusterState . metaData ( ) . concreteIndices ( request . indices ( ) , false , true ) ;
+Genration:  String [ ] data = picker . toString ( resolver . getChild ( 0 ) , new String [ 0 ] ) ;
+=============
+=============
+Buggy code: return new Path ( new Path ( rootdir , "splitlog" ) , tmpname ) ;
+---
+Fixed code: return new Path ( new Path ( rootdir , HConstants . SPLIT_LOGDIR_NAME ) , tmpname ) ;
+Genration:  return new Path ( new HiveConf ( name , path ) ) , entry ) ;
+=============
+=============
+Buggy code: expr = XPathCache . getXPathExpression ( context , hrefDocumentInfo , "boolean(" + condition + ")" , namespaces ) ;
+---
+Fixed code: expr = XPathCache . getXPathExpression ( context , hrefDocumentInfo , "boolean(" + condition + ")" , namespaces , getLocationData ( ) ) ;
+Genration:  this . fs = conf . getLong ( HBASE_REGIONSERVER_LEASE_PERIOD_KEY , 1 , body , null ) ;
+=============
+=============
+Buggy code: Hive . copyFiles ( hiveConf , sourcePath , targetPath , spyTargetFs , isSourceLocal , NO_ACID , false , null ) ;
+---
+Fixed code: Hive . copyFiles ( hiveConf , sourcePath , targetPath , spyTargetFs , isSourceLocal , NO_ACID , false , null , false , false ) ;
+Genration:  UndertowLogger . ROOT_LOGGER . listenerStarted ( "HTTP" , getName ( ) , NetworkUtils . formatIPAddressForURI ( formatIPAddressForURI . separator ) , true ) ;
+=============
+=============
+Buggy code: useExtDns = UseExternalDnsServers . valueIn ( dc . getId ( ) ) ;
+---
+Fixed code: useExtDns = useExtDns || UseExternalDnsServers . valueIn ( dc . getId ( ) ) ;
+Genration:  value = ( RouterContext ) I2PAppContext . getGlobalContext ( ) ;
+=============
+=============
+Buggy code: return stateDesc . getDefaultValue ( ) ;
+---
+Fixed code: return null ;
+Genration:  return StringUtils . defaultIfEmpty ( AppWithMapReduce + getEmail ( ) , getServerFromAddress ( ) ) ;
+=============
+=============
+Buggy code: Min , Max , Sum
+---
+Fixed code: Min , Max , Sum , Avg
+Genration:  ,
+=============
+=============
+Buggy code: input . result = bagFactory . newDefaultBag ( ) ;
+---
+Fixed code: input . result = new NonSpillableDataBag ( ) ;
+Genration:  if ( input . get ( input ) ;
+=============
+=============
+Buggy code: . randomUUID ( ) . toString ( ) , primaryPool ) ;
+---
+Fixed code: . randomUUID ( ) . toString ( ) , primaryPool , 0 ) ;
+Genration:  . write ( new ( ) . equals ( fs , true ) ) ;
+=============
+=============
+Buggy code: + "('s2:int, s3:long, s4:float, s5:string, s6:bytes', '[s1, s2]; [s3, s4]')" ) ;
+---
+Fixed code: + "('[s7, s2]; [s3, s4]')" ) ;
+Genration:  + "('[s1, s2]; [s3, s4]')" ) ;
+=============
+=============
+Buggy code: . map ( this :: asCamelClusterMember )
+---
+Fixed code: . map ( AtomixClusterMember :: new )
+Genration:  . add (
+=============
+=============
+Buggy code: if ( vmMo != null ) {
+---
+Fixed code: if ( vmMo != null && vmMo . isTemplate ( ) ) {
+Genration:  if ( ! pigContext . isEmpty ( ) ) {
+=============
+=============
+Buggy code: HRegion . deleteRegion ( master . fs , master . rootdir , parent ) ;
+---
+Fixed code: HRegion . deleteRegion ( this . master . fs , this . master . rootdir , parent ) ;
+Genration:  nic . ROOT_LOGGER . equals ( name , getName ( ) ) ;
+=============
+=============
+Buggy code: horizontalResizeAnimation ( initialSize , targetSize ) . run ( 300 ) ;
+---
+Fixed code: resizeHorizontally ( initialSize , targetSize ) ;
+Genration:  unassign ( ) . process ( false ) , null ) ;
+=============
+=============
+Buggy code: prettyPrintedRegionName +
+---
+Fixed code: ( prettyPrintedRegionName == null ? "null" : prettyPrintedRegionName ) +
+Genration:  + ")" ) ;
+=============
+=============
+Buggy code: Schema schema = new Schema . Parser ( ) . parse ( new String ( json ) ) ;
+---
+Fixed code: Schema schema = new Schema . Parser ( ) . parse ( new String ( json , ConfigConstants . DEFAULT_CHARSET ) ) ;
+Genration:  res . result = Boolean . valueOf ( ( ( BigDecimal ) res . result ) . signum ( ) != 0 ) ;
+=============
+=============
+Buggy code: Schema schColl = schema . getColumn ( 3 ) . getSchema ( ) ;
+---
+Fixed code: Schema schColl = schema . getColumn ( 3 ) . getSchema ( ) . getColumn ( 0 ) . getSchema ( ) ;
+Genration:  res = HiveConf . getVar ( ConfVars . HIVE_EXECUTION_ENGINE ( ) ) . getValue ( ) ;
+=============
+=============
+Buggy code: "!" , "(" , ")" , "^" , "[" , "{" , ":" , "]" , "}" , "~" } ;
+---
+Fixed code: "!" , "(" , ")" , "^" , "[" , "{" , ":" , "]" , "}" , "~" , "/" } ;
+Genration:  , enablelog , enablelog , enableJobReconnect , null , null , null , null , null ) ;
+=============
+=============
+Buggy code: if ( avgFileSize > context . maxSize ) {
+---
+Fixed code: if ( avgFileSize > context . maxSize || numFiles <= context . minSplits ) {
+Genration:  if ( value != null ) {
+=============
+=============
+Buggy code: result . set ( o . hashCode ( ) ) ;
+---
+Fixed code: result . set ( o == null ? 0 : o . hashCode ( ) ) ;
+Genration:  result . set ( ShimLoader . getHadoopShims ( ) . compareText ( a , b ) ) ;
+=============
+=============
+Buggy code: wh . write ( self . getLabelAttrs ( ) ) . write ( " class=\"" + self . getZclass ( ) + "\"" )
+---
+Fixed code: wh . write ( self . getLabelAttrs ( ) ) . write ( " class=\"" + self . getZclass ( ) + "-cnt\"" )
+Genration:  + project . write ( account . getId ( ) ,
+=============
+=============
+Buggy code: if ( mjCtx . getOldMapJoin ( ) == null ) {
+---
+Fixed code: if ( mjCtx . getOldMapJoin ( ) == null || setReducer ) {
+Genration:  if ( ( ( ScalaCompileOptionsInternal ) getScalaCompileOptions ( ) ) ) {
+=============
+=============
+Buggy code: Directory dir = FSDirectory . getDirectory ( dirName ) ;
+---
+Fixed code: Directory dir = FSDirectory . getDirectory ( dirName , null , false ) ;
+Genration:  Object dir = FSDirectory . getDirectory ( indexDir , null , false ) ;
+=============
+=============
+Buggy code: final String methodSignature = JDOMExternalizer . readString ( e , "METHOD" ) ;
+---
+Fixed code: final String methodSignature = fixSignature ( JDOMExternalizer . readString ( e , "METHOD" ) , false ) ;
+Genration:  final String , String . format ( = ) ;
+=============
+=============
+Buggy code: ClosureCleaner . clean ( function , true ) ;
+---
+Fixed code: clean ( function ) ;
+Genration:  . write ( new Runnable ( 0 , true ) ) ;
+=============
+=============
+Buggy code: if ( isKeyTuple ) {
+---
+Fixed code: if ( isKeyTuple && isKeyCompound ) {
+Genration:  if ( myTokenType == null ) {
+=============
+=============
+Buggy code: if ( ! this . comparators1 [ i ] . equalToReference ( candidate . getField ( keyFields2 [ i ] ) ) ) {
+---
+Fixed code: if ( ! this . comparators1 [ i ] . equalToReference ( candidate . getFieldNotNull ( keyFields2 [ i ] ) ) ) {
+Genration:  if ( ! this . doc ( ) && ! this . HIVE_EXECUTION_ENGINE ( ) . equals ( "tez" ) ) {
+=============
+=============
+Buggy code: return startPerformanceTest ( expected , test ) . message ( message ) ;
+---
+Fixed code: return new TestInfo ( test , expected , message ) ;
+Genration:  return factory . fun ( IOHelper . buffered ( _context ) ) ;
+=============
+=============
+Buggy code: super ( color . getRGB ( ) ) ;
+---
+Fixed code: super ( color != null ? color . getRGB ( ) : 0 ) ;
+Genration:  super ( Token . TOKEN_ATTRIBUTE_FACTORY ) ;
+=============
+=============
+Buggy code: return new CvsRevisionNumber ( myRevisionNumber ) ;
+---
+Fixed code: return myRevision . getCvsRevisionNumber ( ) ;
+Genration:  return new ArrayList < > ( ) ;
+=============
+=============
+Buggy code: tableTypeList . add ( tableTypeMapping . mapToHiveType ( tableType . trim ( ) ) ) ;
+---
+Fixed code: tableTypeList . addAll ( Arrays . asList ( tableTypeMapping . mapToHiveType ( tableType . trim ( ) ) ) ) ;
+Genration:  . add ( new WriteEntity ( tab , WriteEntity . WriteType . DDL_EXCLUSIVE ) ) ;
+=============
+=============
+Buggy code: in . getFamilyMap ( ) . entrySet ( ) ) {
+---
+Fixed code: in . getFamilyCellMap ( ) . entrySet ( ) ) {
+Genration:  . valueOf ( Exchange . wrap ( s ) ) . close ( ) ;
+=============
+=============
+Buggy code: editPage . setObject ( object ( ) ) ;
+---
+Fixed code: editPage . setObject ( ERD2WUtilities . localInstanceFromObjectWithD2WContext ( object ( ) , d2wContext ( ) ) ) ;
+Genration:  . write ( new ( ) ) ;
+=============
+=============
+Buggy code: DocGen . HTML . section ( sb , report ( ) + "<br/>Frame '" + aft . toString ( ) + "' now has " + fr . numCols ( ) + " columns." ) ;
+---
+Fixed code: DocGen . HTML . section ( sb , report ( ) + "<br/>Frame '" + aft . toString ( ) + "' contains the interaction feature." ) ;
+Genration:  . get ( ByteBuffer . wrap ( ( ( ( BigDecimal ) ) ) . getBytes ( ConfigConstants . DEFAULT_CHARSET ) ) ) ;
+=============
+=============
+Buggy code: return this . blockSize * this . numBlocks ;
+---
+Fixed code: return ( long ) this . blockSize * ( long ) this . numBlocks ;
+Genration:  return this . createChildProcessor ( routeContext , false ) ;
+=============
+=============
+Buggy code: if ( myOriginalModels . containsKey ( model ) ) {
+---
+Fixed code: if ( myOriginalModels . containsKey ( model ) ) {
+Genration:  if ( ( ( ScalaCompileOptionsInternal ) getScalaCompileOptions ( ) ) ) {
+=============
+=============
+Buggy code: this . compressionKind = org . apache . orc . CompressionKind . valueOf ( codecStr ) ;
+---
+Fixed code: this . compressionKind = org . apache . orc . CompressionKind . valueOf ( codecStr . toUpperCase ( ) ) ;
+Genration:  this . query = Integer . getInstance ( ) . instantiateCacheManager ( ) ;
+=============
+=============
+Buggy code: if ( pctx . getContext ( ) . getExplain ( ) && ! isSparkExecEngine && ! isTezExecEngine ) {
+---
+Fixed code: if ( isSparkExecEngine || ( pctx . getContext ( ) . getExplain ( ) && ! isTezExecEngine ) ) {
+Genration:  if ( ( ( long ) <= ( ) ) <= ( ) != 0 ) {
+=============
+=============
+Buggy code: return "if" ;
+---
+Fixed code: return NAME ;
+Genration:  return NAME ;
+=============
+=============
+Buggy code: dirs [ k ] = new MockDirectoryWrapper ( random ( ) , new RAMDirectory ( dir , newIOContext ( random ( ) ) ) ) ;
+---
+Fixed code: dirs [ k ] = new MockDirectoryWrapper ( random ( ) , TestUtil . ramCopyOf ( dir ) ) ;
+Genration:  dirs [ alias ] = new MockDirectoryWrapper ( random ( ) , TestUtil . ramCopyOf ( PKG , true ) ) ;
+=============
+=============
+Buggy code: if ( namespaceDelimIndex == 0 || namespaceDelimIndex == - 1 ) {
+---
+Fixed code: if ( namespaceDelimIndex < 0 ) {
+Genration:  if ( ! == - 1 ) {
+=============
+=============
+Buggy code: client . getParams ( ) . setParameter ( ConnRoutePNames . DEFAULT_PROXY , new HttpHost ( host , port ) ) ;
+---
+Fixed code: client . getParams ( ) . setParameter ( ConnRoutePNames . DEFAULT_PROXY , new HttpHost ( host , port , scheme ) ) ;
+Genration:  client . createIndex ( index , buildIndexTable ( DB_NAME , INDEX_TABLE_NAME ) ) ;
+=============
+=============
+Buggy code: TEST_UTIL . loadTable ( ht , FAMILYNAME ) ;
+---
+Fixed code: TEST_UTIL . loadTable ( ht , FAMILYNAME , false ) ;
+Genration:  UTIL . loadTable ( table , false ) ;
+=============
+=============
+Buggy code: if ( e instanceof ServerNotRunningException ) {
+---
+Fixed code: if ( e instanceof ServerNotRunningYetException ) {
+Genration:  if ( e . isEmpty ( ) ) {
+=============
+=============
+Buggy code: COL_REGIONINFO_ARRAY , tableName , System . currentTimeMillis ( ) , null ) ;
+---
+Fixed code: COL_REGIONINFO_ARRAY , tableName , HConstants . LATEST_TIMESTAMP , null ) ;
+Genration:  statusdir , tableName , HConstants . LATEST_TIMESTAMP , null ) ;
+=============
+=============
+Buggy code: if ( includeColumn [ columnId ] ) {
+---
+Fixed code: if ( includeColumn == null || includeColumn [ columnId ] ) {
+Genration:  if ( hiveAuthFactory . size ( ) > 0 ) {
+=============
+=============
+Buggy code: ( OStorageLocalAbstract ) ODatabaseRecordThreadLocal . INSTANCE . get ( ) . getStorage ( ) ) ;
+---
+Fixed code: ( OStorageLocalAbstract ) ODatabaseRecordThreadLocal . INSTANCE . get ( ) . getStorage ( ) . getUnderlying ( ) ) ;
+Genration:  ( ( long ) ( ( ( ) ) ) . getBytes ( 0 ) ) ;
+=============
+=============
+Buggy code: return new TupleTypeInfo ( Tuple0 . class , new TypeInformation < ? > [ 0 ] ) ;
+---
+Fixed code: return new TupleTypeInfo ( Tuple0 . class ) ;
+Genration:  return new SegmentInfo ( ( ( ) ) new signum ( ) . equals ( type , true ) ) ;
+=============
+=============
+Buggy code: String toTest = "hausa_spelling_dictionary-0.2-tb+fx.xpi" ;
+---
+Fixed code: String toTest = "woordenboek_nederlands-3.1.1-sm+tb+fx+fn.xpi" ;
+Genration:  String cmd = . ( ) ;
+=============
+=============
+Buggy code: HRegionInfo . createRegionName ( tableName , null , HConstants . NINES ) ) ;
+---
+Fixed code: HRegionInfo . createRegionName ( tableName , null , HConstants . NINES , false ) ) ;
+Genration:  db . tableName ( new LinkedHashSet < String , String , > ( ) ) ;
+=============
+=============
+Buggy code: MockUserSession . set ( ) . addComponentPermission ( UserRole . USER , PROJECT_KEY , COMPONENT_KEY ) ;
+---
+Fixed code: MockUserSession . set ( ) . addComponentPermission ( UserRole . USER , SUB_PROJECT_KEY , COMPONENT_KEY ) ;
+Genration:  MockUserSession . set ( ) . addComponentPermission ( UserRole . USER , SUB_PROJECT_KEY , COMPONENT_KEY ) ;
+=============
+=============
+Buggy code: amount += Bytes . toLong ( kv . getBuffer ( ) , kv . getValueOffset ( ) ) ;
+---
+Fixed code: amount += Bytes . toLong ( kv . getBuffer ( ) , kv . getValueOffset ( ) , kv . getValueLength ( ) ) ;
+Genration:  + TaskFactory . get ( work . getSd ( ) . getText ( ) ) ) ;
+=============
+=============
+Buggy code: this . addAbility ( new DelverOfSecretsAbility ( ) ) ;
+---
+Fixed code: this . addAbility ( new BeginningOfUpkeepTriggeredAbility ( new DelverOfSecretsEffect ( ) , TargetController . YOU , false ) ) ;
+Genration:  this . new ArrayList ( conf , null ) ;
+=============
+=============
+Buggy code: String msg = "Cannot cast to bytearray" ;
+---
+Fixed code: String msg = "Cannot cast from " + DataType . findTypeName ( inType ) + " to bytearray" ;
+Genration:  String msg = new String ( ) ;
+=============
+=============
+Buggy code: + " \"intervals\": [ \"2012-01-01T00:00:00.000/2012-01-03T00:00:00.000\" ]"
+---
+Fixed code: + " \"intervals\": [ \"2012-01-01T00:00:00.000-08:00/2012-01-03T00:00:00.000-08:00\" ]"
+Genration:  + ")" ) ;
+=============
+=============
+Buggy code: Format format = FormatFactory . getFormat ( type , pattern , precision ) ;
+---
+Fixed code: Format format = FormatFactory . getFormat ( type , pattern , getLocale ( ) , precision ) ;
+Genration:  format = FormatFactory . getFormat ( type , pattern , getLocale ( ) , precision ) ;
+=============
+=============
+Buggy code: builder . addField ( getHCatFieldSchema ( fieldName , stypeInfo . getStructFieldTypeInfo ( fieldName ) ) ) ;
+---
+Fixed code: builder . addField ( getHCatFieldSchema ( fieldName , stypeInfo . getStructFieldTypeInfo ( fieldName ) , null ) ) ;
+Genration:  builder . add (
+=============
+=============
+Buggy code: ServiceList services = getKubernetes ( ) . getServices ( ) ;
+---
+Fixed code: ServiceList services = getKubernetes ( ) . services ( ) . inNamespace ( getNamespace ( ) ) . list ( ) ;
+Genration:  value = this . createChildProcessor ( routeContext , false ) ;
+=============
+=============
+Buggy code: addr ,
+---
+Fixed code: HCatHadoopShims . Instance . get ( ) . getAddress ( conf ) ,
+Genration:  jobManagerJobMetricGroupFactory ,
+=============
+=============
+Buggy code: if ( values == null || values . isEmpty ( ) ) {
+---
+Fixed code: if ( values . isEmpty ( ) ) {
+Genration:  if ( values == null || values . size ( ) == 0 ) {
+=============
+=============
+Buggy code: RoleDDLDesc roleDesc = new RoleDDLDesc ( roleName , RoleDDLDesc . RoleOperation . CREATE_ROLE ) ;
+---
+Fixed code: RoleDDLDesc roleDesc = new RoleDDLDesc ( roleName , PrincipalType . ROLE , RoleDDLDesc . RoleOperation . CREATE_ROLE , null ) ;
+Genration:  , fetchResults = new GeoStandardCircle ( new SimpleDateFormat ( new SpiritWhiteToken ( ) , - 1 , null ) ;
+=============
+=============
+Buggy code: String [ ] testNames = new String [ ] { "join1.q" , "join2.q" , "groupby1.q" , "groupby2.q" } ;
+---
+Fixed code: String [ ] testNames = new String [ ] { "join1.q" , "join2.q" , "groupby1.q" , "groupby2.q" , "join3.q" , "input1.q" , "input19.q" } ;
+Genration:  String [ ] data = new byte [ UnicodeUtil . maxUTF8Length ( s ) ] ;
+=============
+=============
+Buggy code: connSuccessful = defaultBeelineConnect ( ) ;
+---
+Fixed code: connSuccessful = defaultBeelineConnect ( cl ) ;
+Genration:  v = null ;
+=============
+=============
+Buggy code: _vpcDrSeqNoDao . lockRow ( seqVo . getId ( ) , true ) ;
+---
+Fixed code: seqVo = _vpcDrSeqNoDao . lockRow ( seqVo . getId ( ) , true ) ;
+Genration:  . ( ) . add ( new WriteEntity ( 0 , true ) ) ;
+=============
+=============
+Buggy code: vrbCtx . init ( hconf , fileKey , ( StructObjectInspector ) outputObjInspector ) ;
+---
+Fixed code: vrbCtx . init ( vOutContext . getScratchColumnTypeMap ( ) , ( StructObjectInspector ) outputObjInspector ) ;
+Genration:  . get ( get ( i ) ) , ( ( ) ) . ( ) + ")" ) ;
+=============
+=============
+Buggy code: myRoot = new DefaultMutableTreeNode ( ) ;
+---
+Fixed code: myRoot = new ArrangementTreeNode ( null ) ;
+Genration:  . File ( new ArrayList < WriteEntity > ( ) ) ;
+=============
+=============
+Buggy code: MetaStoreThread . BooleanPointer startedServing = new MetaStoreThread . BooleanPointer ( ) ;
+---
+Fixed code: AtomicBoolean startedServing = new AtomicBoolean ( ) ;
+Genration:  res . result = new LinkedHashSet . Builder ( ) ;
+=============
+=============
+Buggy code: return true ;
+---
+Fixed code: return false ;
+Genration:  return nextKeyValue ( ) ;
+=============
+=============
+Buggy code: OutputStreamWriter out = new OutputStreamWriter ( outputStream ) ;
+---
+Fixed code: OutputStreamWriter out = new OutputStreamWriter ( outputStream , IOConverter . getCharsetName ( exchange ) ) ;
+Genration:  DefaultParser parser = new DefaultParser ( ) ;
+=============
+=============
+Buggy code: return getScanner ( columns , startRow , HConstants . LATEST_TIMESTAMP , null ) ;
+---
+Fixed code: return getScanner ( Bytes . toByteArrays ( columns ) , startRow . getBytes ( ) ) ;
+Genration:  return factory . process ( fs , iContent , iContext , iOutput , iReadOnly ) ;
+=============
+=============
+Buggy code: MockUserSession . set ( ) . addComponentPermission ( UserRole . USER , PROJECT_KEY , COMPONENT_KEY ) ;
+---
+Fixed code: MockUserSession . set ( ) . addComponentPermission ( UserRole . USER , SUB_PROJECT_KEY , COMPONENT_KEY ) ;
+Genration:  MockUserSession . set ( ) . addComponentPermission ( UserRole . USER , SUB_PROJECT_KEY , COMPONENT_KEY ) ;
+=============
+=============
+Buggy code: PosixParser parser = new PosixParser ( ) ;
+---
+Fixed code: DefaultParser parser = new DefaultParser ( ) ;
+Genration:  DefaultParser parser = new DefaultParser ( ) ;
+=============
+=============
+Buggy code: workJob . setCmd ( VmWorkMigrate . class . getName ( ) ) ;
+---
+Fixed code: workJob . setCmd ( VmWorkMigrateWithStorage . class . getName ( ) ) ;
+Genration:  . class . getName ( ) . equals ( name ) ) ;
+=============
+=============
+Buggy code: this ( firstName , lastName , StringUtils . EMPTY , emailId , - 1 ) ;
+---
+Fixed code: this ( firstName , lastName , StringUtils . EMPTY , emailId , - 1 ) ;
+Genration:  this ( Token . TOKEN_ATTRIBUTE_FACTORY , config . getConfiguration ( ) , table , null ) ;
+=============
+=============
+Buggy code: requestCompaction ( r , s , why , NO_PRIORITY ) ;
+---
+Fixed code: requestCompaction ( r , s , why , Store . NO_PRIORITY ) ;
+Genration:  addEntities ( name , name , context . getId ( ) , false ) ;
+=============
+=============
+Buggy code: return ICalWorker . createNotAuthorizedResponse ( null ) ;
+---
+Fixed code: return null ;
+Genration:  return ( RouterContext ) I2PAppContext . getGlobalContext ( ) ;
+=============
+=============
+Buggy code: PlanWalker childWalker = new ReverseDependencyOrderWalker ( lp ) ;
+---
+Fixed code: PlanWalker childWalker = new ReverseDependencyOrderWalkerWOSeenChk ( lp ) ;
+Genration:  return false ;
+=============
+=============
+Buggy code: completedUrl , allFiles , enablelog , jobType ) ) ;
+---
+Fixed code: completedUrl , allFiles , enablelog , enableJobReconnect , jobType ) ) ;
+Genration:  completedUrl , enablelog , enableJobReconnect , enableJobReconnect ) ;
+=============
+=============
+Buggy code: throw new DoNotRetryIOException ( "Missing required field: qualifer value" ) ;
+---
+Fixed code: throw new DoNotRetryIOException ( "Missing required field: qualifier value" ) ;
+Genration:  throw new IOException ( new ( ) ) ;
+=============
+=============
+Buggy code: cctx . deploy ( ) . unwind ( ) ;
+---
+Fixed code: cctx . deploy ( ) . unwind ( cctx ) ;
+Genration:  . class . equals ( key ) ;
+=============
+=============
+Buggy code: ParameterDeclarationList . parse ( builder ) ;
+---
+Fixed code: ParameterDeclarationList . parse ( builder , mRPAREN ) ;
+Genration:  . get ( RuleField . getFlags ( ) ) ;
+=============
+=============
+Buggy code: final LineFileDocs docs = new LineFileDocs ( random ) ;
+---
+Fixed code: final LineFileDocs docs = new LineFileDocs ( random , defaultCodecSupportsDocValues ( ) ) ;
+Genration:  final LineFileDocs docs = new LineFileDocs ( random , defaultCodecSupportsDocValues ( ) ) ;
+=============
+=============
+Buggy code: registerBeanDefinitionParser ( "custom-processor" , new MessageProcessorDefinitionParser ( ) ) ;
+---
+Fixed code: registerMuleBeanDefinitionParser ( "custom-processor" , new MessageProcessorDefinitionParser ( ) ) . addIgnored ( "name" ) ;
+Genration:  addEntities ( new ArrayList < ? > ( ) ) ;
+=============
+=============
+Buggy code: this . log . sync ( txid ) ;
+---
+Fixed code: syncOrDefer ( txid ) ;
+Genration:  + ( InterruptedIOException ) this . byteSize ) ;
+=============
+=============
+Buggy code: assert childrenLatch > 0 ;
+---
+Fixed code: assert childrenLatch > 0 : this ;
+Genration:  assert += > ( ) ;
+=============
+=============
+Buggy code: initialize ( size ) ;
+---
+Fixed code: super ( size ) ;
+Genration:  super ( size ) ;
+=============
+=============
+Buggy code: return new MIndex ( index . getIndexName ( ) , origTable , index . getCreateTime ( ) ,
+---
+Fixed code: return new MIndex ( index . getIndexName ( ) . toLowerCase ( ) , origTable , index . getCreateTime ( ) ,
+Genration:  return new ( ) . getTypeConverter ( ) . convertTo ( type , exchange , body ) ;
+=============
+=============
+Buggy code: throw new UnsupportedOperationException ( ) ;
+---
+Fixed code: return 0 ;
+Genration:  return String . format (
+=============
+=============
+Buggy code: env . put ( UserGroupInformation . HADOOP_TOKEN_FILE_LOCATION ,
+---
+Fixed code: env . put ( ShimLoader . getHadoopShims ( ) . getTokenFileLocEnvName ( ) ,
+Genration:  . put ( i , ExchangePattern . InOut , "James" ,
+=============
+=============
+Buggy code: return 0 ;
+---
+Fixed code: return MAX_SLOTS_UNKNOWN ;
+Genration:  return Collections . unmodifiableList ( new ArrayList < LongValue , Accumulator < ? , ? > > ( ) ) ;
+=============
+=============
+Buggy code: Table indexTable = buildTable ( DB_NAME , INDEX_TABLE_NAME ) ;
+---
+Fixed code: Table indexTable = buildIndexTable ( DB_NAME , INDEX_TABLE_NAME ) ;
+Genration:  Table indexTable = buildIndexTable ( DB_NAME , INDEX_TABLE_NAME ) ;
+=============
+=============
+Buggy code: if ( mapArray == null || mapArray . length == 0 ) {
+---
+Fixed code: if ( mapArray == null ) {
+Genration:  if ( ! this . HIVE_EXECUTION_ENGINE ( ) . isEmpty ( ) ) {
+=============
+=============
+Buggy code: if ( markedForDisposal )
+---
+Fixed code: if ( markedForDisposal )
+Genration:  if ( myTokenType == null ) )
+=============
+=============
+Buggy code: TaskAttemptContext newContext = new TaskAttemptContextImpl ( conf , taskId ) ;
+---
+Fixed code: TaskAttemptContext newContext = new TaskAttemptContextImpl ( new Configuration ( conf ) , taskId ) ;
+Genration:  , conf = new DefaultParser ( ) ;
+=============
+=============
+Buggy code: Path archivedHfileDir = new Path ( UTIL . getDataTestDir ( ) , HConstants . HFILE_ARCHIVE_DIRECTORY ) ;
+---
+Fixed code: Path archivedHfileDir = new Path ( UTIL . getDataTestDirOnTestFS ( ) , HConstants . HFILE_ARCHIVE_DIRECTORY ) ;
+Genration:  Path cmd = new File ( UTIL . getDataTestDirOnTestFS ( ) , HConstants . getString ( PKG , true ) ) ;
+=============
+=============
+Buggy code: assertEquals ( clusterId , rst . getRegionServer ( ) . getConfiguration ( ) . get ( HConstants . CLUSTER_ID ) ) ;
+---
+Fixed code: assertEquals ( clusterId , rst . getRegionServer ( ) . getClusterId ( ) ) ;
+Genration:  assertEquals ( "MyScheduler-" + ( ( ) ) . ( ) . length ( ) + ")" ) ;
+=============
+=============
+Buggy code: dagAMConf . set ( entry . getValue ( ) , dagAMConf . get ( entry . getKey ( ) ) ) ;
+---
+Fixed code: dagAMConf . setIfUnset ( entry . getValue ( ) , dagAMConf . get ( entry . getKey ( ) ) ) ;
+Genration:  . set ( ) . set ( ) . set ( ) . toString ( ) ;
+=============
+=============
+Buggy code: detectDeadlock ( e , "unlock" ) ;
+---
+Fixed code: detectDeadlock ( dbConn , e , "unlock" ) ;
+Genration:  detectDeadlock ( dbConn , e , "cleanEmptyAbortedTxns" ) ;
+=============
+=============
+Buggy code: updateIndexes ( put ) ;
+---
+Fixed code: updateIndexes ( put , lockId ) ;
+Genration:  if ( ! revisit && subExpResults != null ) ;
+=============
+=============
+Buggy code: evictableSize = currentPartitionSize * evictionPercentage / 100 ;
+---
+Fixed code: evictableSize = Math . max ( currentPartitionSize * evictionPercentage / 100 , 1 ) ;
+Genration:  _context = ( RouterContext ) I2PAppContext . getGlobalContext ( ) ;
+=============
+=============
+Buggy code: if ( value != null ) {
+---
+Fixed code: if ( value != null && value . length > 0 ) {
+Genration:  if ( value != null && value . length > 0 ) {
+=============
+=============
+Buggy code: DEFAULT_VALUE ( "default" ) ;
+---
+Fixed code: VALUE ( "value" ) ;
+Genration:  if ( myTokenType != null ) ;
+=============
+=============
+Buggy code: public Object defaultVal ( ) { return JacksonUtils . toObject ( defaultValue ) ; }
+---
+Fixed code: public Object defaultVal ( ) { return JacksonUtils . toObject ( defaultValue , schema ) ; }
+Genration:  public Object process ( null ) throws IOException {
+=============
+=============
+Buggy code: sb . append ( "up to " ) . append ( target . getMaxNumberOfTargets ( ) ) . append ( " target " ) . append ( target . getTargetName ( ) ) . append ( " to their owners' hand" ) ;
+---
+Fixed code: sb . append ( "up to " ) . append ( CardUtil . numberToText ( target . getMaxNumberOfTargets ( ) ) ) . append ( " target " ) . append ( target . getTargetName ( ) ) . append ( " to their owners' hand" ) ;
+Genration:  sb . append ( Bytes . toStringBinary ( res1 . getRow ( ) ) ) ;
+=============
+=============
+Buggy code: return componentSpec . getBinaries ( ) ;
+---
+Fixed code: return componentSpec . getBinariesContainer ( ) ;
+Genration:  return . ( ) == null ? null : null ;
+=============
+=============
+Buggy code: if ( in . getCurrentToken ( ) == JsonToken . VALUE_NUMBER_INT ) {
+---
+Fixed code: if ( in . getCurrentToken ( ) . isNumeric ( ) ) {
+Genration:  if ( in . getCurrentToken ( ) . isNumeric ( ) ) {
+=============
+=============
+Buggy code: LOG . warn ( "Couldn't connect to " + endpoint . getConfiguration ( ) ) ;
+---
+Fixed code: LOG . warn ( "Couldn't connect to: " + endpoint . getConfiguration ( ) . remoteServerInformation ( ) ) ;
+Genration:  LOG . warn ( "Going to close region " + currentRegion . getRegionNameAsString ( ) ) ;
+=============
+=============
+Buggy code: return ( String ) fields . get ( "desc" ) ;
+---
+Fixed code: return ( String ) fields . get ( RuleField . DESCRIPTION . key ( ) ) ;
+Genration:  return ( String ) fields . get ( RuleField . getFlags ( ) ) ;
+=============
+=============
+Buggy code: unassign ( regionInfo , rs , expectedVersion , sn , true ) ;
+---
+Fixed code: unassign ( regionInfo , rs , expectedVersion , sn , true , null ) ;
+Genration:  unassign ( region , state , this , false , true ) ;
+=============
+=============
+Buggy code: return ElementClassFilter . VARIABLE ;
+---
+Fixed code: return new OrFilter ( ElementClassFilter . CLASS , ElementClassFilter . VARIABLE ) ;
+Genration:  return null ;
+=============
+=============
+Buggy code: if ( Enum . class . isAssignableFrom ( targetType . getClass ( ) ) ) {
+---
+Fixed code: if ( targetType instanceof Class && Enum . class . isAssignableFrom ( ( Class < ? > ) targetType ) ) {
+Genration:  if ( ! ( ( ) ) . ( ) != 0 ) {
+=============
+=============
+Buggy code: int blockIndex = ( int ) ( ( long ) index * bitsPerValue ) > > > BLOCK_BITS ;
+---
+Fixed code: int blockIndex = ( int ) ( ( ( long ) index * bitsPerValue ) > > > BLOCK_BITS ) ;
+Genration:  int mid = ( ( List < String > ) > > > 1 ) ;
+=============
+=============
+Buggy code: return null ;
+---
+Fixed code: return "editing.altInsert.tostring.settings" ;
+Genration:  return new ArrayList < 0 , Integer > ( null ) ;
+=============
+=============
+Buggy code: storageFormat . fillDefaultStorageFormat ( ) ;
+---
+Fixed code: storageFormat . fillDefaultStorageFormat ( false ) ;
+Genration:  . ( ) ) ;
+=============
+=============
+Buggy code: assertTokenStreamContents ( ts , new String [ 0 ] ) ;
+---
+Fixed code: assertTokenStreamContents ( ts , new String [ 0 ] , new int [ ] { } , new int [ ] { } , 5 ) ;
+Genration:  assertTokenStreamContents ( ts , new String [ ] { 0 , new int [ ] { 1 } , new int [ ] { 1 } , new int [ ] { 1 } , new int [ ] { 1 } , new int [ ] { 1 } , new int [ ] { 1 } , new int [ ]
+=============
+=============
+Buggy code: iw . shutdown ( ) ;
+---
+Fixed code: iw . close ( ) ;
+Genration:  iw . close ( ) ;
+=============
+=============
+Buggy code: String dbName = "tmpdb" ;
+---
+Fixed code: String dbName = "hive4159" ;
+Genration:  String name = value ;
+=============
+=============
+Buggy code: if ( rit . isPendingCloseOrClosing ( )
+---
+Fixed code: if ( ( rit . isPendingCloseOrClosing ( ) || rit . isOffline ( ) )
+Genration:  if ( Util . isHadoop23 ( ) )
+=============
+=============
+Buggy code: double angle = maxDistanceKM / ( SloppyMath . earthDiameter ( originLat ) / 2.0 ) ;
+---
+Fixed code: double angle = maxDistanceKM / EARTH_RADIUS_KM ;
+Genration:  long = ( RouterContext ) I2PAppContext . getGlobalContext ( ) ;
+=============
+=============
+Buggy code: root = handleOrderBy ( root ) ;
+---
+Fixed code: root = handleOrderBy ( root , true ) ;
+Genration:  dir = null ;
+=============
+=============
+Buggy code: readerToFile . put ( readerType , fileType ) ;
+---
+Fixed code: readerToFile . put ( readerType . getId ( ) , fileType ) ;
+Genration:  Assert . put ( job . get ( ) ) ;
+=============
+=============
+Buggy code: connectionFactory . get ( TRANSACTION ) . set ( txType ) ;
+---
+Fixed code: connectionFactory . get ( Pooled . TRANSACTION . getName ( ) ) . set ( txType ) ;
+Genration:  . get ( get ( ) ) . get ( key ) . get ( key ) ;
+=============
+=============
+Buggy code: throw new HiveAuthzPluginException ( "Error create role : " + e . getMessage ( ) , e ) ;
+---
+Fixed code: throw SQLAuthorizationUtils . getPluginException ( "Error create role" , e ) ;
+Genration:  throw new IOException ( e . getMessage ( ) , e ) ;
+=============
+=============
+Buggy code: HBaseAdmin admin = this . context . getHaseIntegrationTestingUtility ( ) . getHBaseAdmin ( ) ;
+---
+Fixed code: HBaseAdmin admin = this . context . getHBaseIntegrationTestingUtility ( ) . getHBaseAdmin ( ) ;
+Genration:  return admin . getMessage ( ) . get ( type ) . build ( ) ;
+=============
+=============
+Buggy code: outputSelectors = new HashMap < String , OutputSelector < ? > > ( ) ;
+---
+Fixed code: outputSelectors = new HashMap < String , List < OutputSelector < ? > > > ( ) ;
+Genration:  , false = new DefaultCacheManagerFactory ( ) . instantiateCacheManager ( ) ;
+=============
+=============
+Buggy code: plcEnabled = plc != null && memoryMode != OFFHEAP_TIERED ;
+---
+Fixed code: plcEnabled = plc != null && ( cctx . isNear ( ) || memoryMode != OFFHEAP_TIERED ) ;
+Genration:  schema = ( RouterContext != null ? null : "" ) . getValue ( ) ;
+=============
+=============
+Buggy code: if ( data == null || data . length <= 0 ) return ZooKeeperProtos . Table . State . ENABLED ;
+---
+Fixed code: if ( data == null || data . length <= 0 ) return null ;
+Genration:  if ( ! this . regionInfo . getRegionNameAsString ( ) ) return null ;
+=============
+=============
+Buggy code: this . fields = new HashMap ( ) ;
+---
+Fixed code: this . fields = new HashMap < String , Object > ( ) ;
+Genration:  this . new conf = new ArrayList < DroolsError > ( ) ;
+=============
+=============
+Buggy code: . setDescription ( "Custom measures management" )
+---
+Fixed code: . setDescription ( "Manage custom measures for a project. See also api/metrics." )
+Genration:  . setDescription ( set )
+=============
+=============
+Buggy code: if ( sourceHashHolder . hasBothReferenceAndCurrentSource ( ) && hasLastScan ) {
+---
+Fixed code: if ( sourceHashHolder != null && sourceHashHolder . getHashedReference ( ) != null && hasLastScan ) {
+Genration:  if ( ( ( ScalaCompileOptionsInternal ) getScalaCompileOptions ( ) ) ) {
+=============
+=============
+Buggy code: throw new LeaderRetrievalException ( "Could not retrieve the leader gateway" , e ) ;
+---
+Fixed code: throw new LeaderRetrievalException ( "Could not retrieve the leader gateway." , e ) ;
+Genration:  throw new IOException ( new ( ) ) ;
+=============
+=============
+Buggy code: return ( myContext == null ? 0 : myContext . hashCode ( ) ) + 10 * mySourceElement . hashCode ( ) + 20 * getClass ( ) . getName ( ) . hashCode ( ) ;
+---
+Fixed code: return ( myContext == null ? 0 : myContext . hashCode ( ) ) + 10 * ( mySourceElement == null ? 0 : mySourceElement . hashCode ( ) ) + 20 * getClass ( ) . getName ( ) . hashCode ( ) ;
+Genration:  return ( float ) ( ( ( v == null ) || ( ( v == null ) || ( long ) || ! ( p == null ) ) ) ;
+=============
+=============
+Buggy code: return receiver . type . equals ( returnType ) ;
+---
+Fixed code: return receiver . type . asCQL3Type ( ) . equals ( returnType . asCQL3Type ( ) ) ;
+Genration:  return ! this . compareTo ( ( ) ) ;
+=============
+=============
+Buggy code: localLog . info ( "Stopping Google PubSub consumer" ) ;
+---
+Fixed code: localLog . info ( "Stopping Google PubSub consumer for {}/{}" , endpoint . getProjectId ( ) , endpoint . getDestinationName ( ) ) ;
+Genration:  + info . get ( ) ;
+=============
+=============
+Buggy code: Graph sub = SubGraph . extract ( a , "uses" , Direction . OUT , "implements" , Direction . OUT ) ;
+---
+Fixed code: Graph sub = SubGraph . extract ( a , EdgePath . create ( Direction . OUT , "uses" , Direction . OUT , "implements" ) ) ;
+Genration:  , fetchResults = TwitterHelper . getTarget ( AbstractFigureParameter_Behavior . call_getDiagramNodeCell_1491555030355957123 ( _context . getNode ( ) ) , "figure" , true ) ;
+=============
+=============
+Buggy code: LOG . info ( "FtpConsumer's client is being explicitly disconnected" ) ;
+---
+Fixed code: LOG . debug ( "Disconnecting from " + endpoint . getConfiguration ( ) . remoteServerInformation ( ) ) ;
+Genration:  LOG . info ( e ) ;
+=============
+=============
+Buggy code: mapperParser = new DocumentMapperParser ( new Index ( "test" ) , new AnalysisService ( new Index ( "test" ) ) , null , null ) ;
+---
+Fixed code: mapperParser = new DocumentMapperParser ( new Index ( "test" ) , new AnalysisService ( new Index ( "test" ) ) , null , null , null ) ;
+Genration:  , false = new DefaultCacheManagerFactory ( ) . instantiateCacheManager ( ) ;
+=============
+=============
+Buggy code: + " to double: " + e . toString ( ) ) ;
+---
+Fixed code: + " to double: " + e . toString ( ) , e ) ;
+Genration:  + + + e . toString ( ) ) ;
+=============
+=============
+Buggy code: + Constants . STRING_TYPE_NAME + "\", but \""
+---
+Fixed code: + serdeConstants . STRING_TYPE_NAME + "\", but \""
+Genration:  + rowFields . size ( ) +
+=============
+=============
+Buggy code: if ( mapArray == null || mapArray . length == 0 ) {
+---
+Fixed code: if ( mapArray == null ) {
+Genration:  if ( ! this . HIVE_EXECUTION_ENGINE ( ) . isEmpty ( ) ) {
+=============
+=============
+Buggy code: if ( input == null || input . size ( ) < 1 ) {
+---
+Fixed code: if ( input == null || input . size ( ) < 1 || input . get ( 0 ) == null ) {
+Genration:  if ( input == null || input . size ( ) == 0 || input . get ( 0 ) == null ) {
+=============
+=============
+Buggy code: this . hiveConf , this . partitionCache , this . noColsMissingStats ) ;
+---
+Fixed code: this . hiveConf , this . partitionCache , this . colStatsCache , this . noColsMissingStats ) ;
+Genration:  this . fs , conf , false , null ) ;
+=============
+=============
+Buggy code: + this . serverName . getPort ( ) , this ) ;
+---
+Fixed code: + this . serverName . getPort ( ) , this , true ) ;
+Genration:  + + + + ")" ) ;
+=============
+=============
+Buggy code: listener . onDropPartition ( new DropPartitionEvent ( part , success , this ) ) ;
+---
+Fixed code: listener . onDropPartition ( new DropPartitionEvent ( tbl , part , success , this ) ) ;
+Genration:  new window ( new Message ( TestOperators + getName ( ) , length , ) ) ;
+=============
+=============
+Buggy code: HashMap < String , ASTNode > aggregations = doPhase1GetAggregationsFromSelect ( ast ) ;
+---
+Fixed code: LinkedHashMap < String , ASTNode > aggregations = doPhase1GetAggregationsFromSelect ( ast ) ;
+Genration:  Map < String , Object > map = new LinkedHashMap < String , Object > ( ) ;
+=============
+=============
+Buggy code: if ( indexName . compareTo ( DOCS_INDEX_NAME ) == 0 ) {
+---
+Fixed code: if ( indexName . compareTo ( BuilderFactory . DOCS_TYPE ) == 0 ) {
+Genration:  if ( ( ( ScalaCompileOptionsInternal ) getScalaCompileOptions ( ) ) . internalIsUseAnt ( ) ) {
+=============
+=============
+Buggy code: if ( classEnvRule != null ) {
+---
+Fixed code: if ( classEnvRule != null && classEnvRule . isInitialized ( ) ) {
+Genration:  if ( value != null && value . length > 0 ) {
+=============
+=============
+Buggy code: conf , jobId ) ;
+---
+Fixed code: new Configuration ( conf ) , jobId ) ;
+Genration:  conf , false , true ) ;
+=============
+=============
+Buggy code: exitVal = tsk . executeTask ( ) ;
+---
+Fixed code: exitVal = tsk . executeTask ( ss == null ? null : ss . getHiveHistory ( ) ) ;
+Genration:  value = UnBoxingEvaluator . unbox ( myConditionEvaluator . evaluate ( context ) ) ;
+=============
+=============
+Buggy code: if ( certificate == null || certificate . isEmpty ( ) || key == null || key . isEmpty ( ) || domainSuffix == null || domainSuffix . isEmpty ( ) ) {
+---
+Fixed code: if ( Strings . isNullOrEmpty ( certificate ) || Strings . isNullOrEmpty ( key ) || Strings . isNullOrEmpty ( domainSuffix ) ) {
+Genration:  if ( ! this . regionInfo . getRegionNameAsString ( ) ) {
+=============
+=============
+Buggy code: tblDesc . setLocation ( wh . getTablePath ( parentDb , tblDesc . getTableName ( ) ) . toString ( ) ) ;
+---
+Fixed code: tblDesc . setLocation ( wh . getDefaultTablePath ( parentDb , tblDesc . getTableName ( ) ) . toString ( ) ) ;
+Genration:  . get ( get ( i ) ) . getText ( ) . toLowerCase ( ) , val ) ;
+=============
+=============
+Buggy code: objectInStoreMgr . delete ( this ) ;
+---
+Fixed code: objectInStoreMgr . deleteIfNotReady ( this ) ;
+Genration:  v . start ( true ) ;
+=============
+=============
+Buggy code: if ( HiveConf . getBoolVar ( jobConf , ConfVars . HIVE_ACID_TABLE_SCAN ) ) {
+---
+Fixed code: if ( AcidUtils . isFullAcidScan ( jobConf ) ) {
+Genration:  if ( HiveConf . getVar ( ConfVars . HIVE_EXECUTION_ENGINE ) . equals ( "tez" ) ) {
+=============
+=============
+Buggy code: Processor childProcessor = routeContext . createProcessor ( this ) ;
+---
+Fixed code: Processor childProcessor = this . createChildProcessor ( routeContext , true ) ;
+Genration:  + this . createChildProcessor ( routeContext , true ) ;
+=============
+=============
+Buggy code: TotalOrderPartitioner . setPartitionFile ( job , partitionFile ) ;
+---
+Fixed code: ShimLoader . getHadoopShims ( ) . setTotalOrderPartitionFile ( job , partitionFile ) ;
+Genration:  . write ( i , this , conf ) ;
+=============
+=============
+Buggy code: Task < ReplStateLogWork > replLogTask = TaskFactory . get ( replLogWork , context . hiveConf ) ;
+---
+Fixed code: Task < ReplStateLogWork > replLogTask = TaskFactory . get ( replLogWork , context . hiveConf , true ) ;
+Genration:  Task < ? > loadTableTask = TaskFactory . get ( work , conf . hiveConf ) ;
+=============
+=============
+Buggy code: String address = uri . startsWith ( "jetty:" ) ? remaining : uri ;
+---
+Fixed code: String address = remaining ;
+Genration:  String name = this . exchange . getRegionNameAsString ( ) ? exchange . mySeed ( ) : file . peers . mySeed ( ) . getName ( ) ) ;
+=============
+=============
+Buggy code: String fileName = paths [ paths . length - 1 ] ;
+---
+Fixed code: String fileName = paths [ paths . length - 1 ] . toLowerCase ( ) ;
+Genration:  String message = exchange . getContext ( ) . getTypeConverter ( ) . convertTo ( String . class , exchange , exchange ) ;
+=============
+=============
+Buggy code: } else if ( config . getPort ( ) == - 1 ) {
+---
+Fixed code: } else if ( config . getPort ( ) == - 1 || config . getPort ( ) == 0 ) {
+Genration:  } else if ( ! StringUtils . isLocal ( results , t ) ) {
+=============
+=============
+Buggy code: JSONObject outJSONObject = new JSONObject ( ) ;
+---
+Fixed code: JSONObject outJSONObject = new JSONObject ( new LinkedHashMap < > ( ) ) ;
+Genration:  JSONObject json = new JSONObject ( new LinkedHashMap < > ( ) ) ;
+=============
+=============
+Buggy code: LOG . info ( Bytes . toString ( splits [ i ] ) ) ;
+---
+Fixed code: LOG . info ( Bytes . toStringBinary ( splits [ i ] ) ) ;
+Genration:  LOG . info ( "Setting lock request transaction to " + sourceTask . remoteServerInformation ( ) ) ;
+=============
+=============
+Buggy code: client = HiveMetaStore . newHMSHandler ( "hive client" , conf , true ) ;
+---
+Fixed code: client = HiveMetaStore . newRetryingHMSHandler ( "hive client" , conf , true ) ;
+Genration:  client = ; = null . get ( = ) . build ( ) ;
+=============
+=============
+Buggy code: for ( int j = 0 ; j < annotations [ i ] . length ; j ++ ) {
+---
+Fixed code: for ( int j = 0 ; j < annotations [ i ] . length ; j ++ ) {
+Genration:  while ( int i = 0 ; i < 0 ) { else if ( input . length ( ) ) {
+=============
+=============
+Buggy code: @ Assisted ( "application" ) Id . Application application ,
+---
+Fixed code: @ Assisted ( "applicationId" ) Id . Application application ,
+Genration:  ( List < ? extends Serializable > , Integer > ( ) )
+=============
+=============
+Buggy code: if ( markedForDisposal )
+---
+Fixed code: if ( markedForDisposal )
+Genration:  if ( myTokenType == null ) )
+=============
+=============
+Buggy code: this . columnAccessInfo . add ( tab . getCompleteName ( ) , tab . getCols ( ) . get ( ord . i ) . getName ( ) ) ;
+---
+Fixed code: this . columnAccessInfo . add ( tab . getCompleteName ( ) , tab . getAllCols ( ) . get ( ord . i ) . getName ( ) ) ;
+Genration:  this . comparator . add ( new WriteEntity ( tab , WriteEntity . WriteType . DDL_EXCLUSIVE ) ) ;
+=============
+=============
+Buggy code: return new ManagedReferenceLifecycleMethodInterceptor ( ref , method , changeMethod ) ;
+---
+Fixed code: return new ManagedReferenceLifecycleMethodInterceptor ( ref , method , changeMethod , this . lifecycleMethod ) ;
+Genration:  return new Message ( new ArrayList < LongValue , Operator < ? extends Serializable > > ( ) ) ;
+=============
+=============
+Buggy code: outputItemsets ( ch , itemsetUpdate ) ;
+---
+Fixed code: outputItemsets ( pipelineContext , ch , itemsetUpdate ) ;
+Genration:  addEntities ( null , null ) ;
+=============
+=============
+Buggy code: assertTrue ( e . getMessage ( ) . contains ( "Error during parsing" ) ) ;
+---
+Fixed code: assertTrue ( e . getMessage ( ) . contains ( "<line 1, column 62> mismatched input ';' expecting RIGHT_PAREN" ) ) ;
+Genration:  assertTrue ( e . getMessage ( ) . startsWith ( "cvc-complex-type.2.4.b" ) ) ;
+=============
+=============
+Buggy code: super ( TypeInfoFactory . stringTypeInfo ) ;
+---
+Fixed code: super ( ) ;
+Genration:  super ( Token . TOKEN_ATTRIBUTE_FACTORY ) ;
+=============
+=============
+Buggy code: public DocData getNextDocData ( DocData docData ) throws NoMoreDataException , IOException {
+---
+Fixed code: public synchronized DocData getNextDocData ( DocData docData ) throws NoMoreDataException , IOException {
+Genration:  public void write (
+=============
+=============
+Buggy code: assertEquals ( "b b <b>a</b> b <b>a</b> b" , f [ 1 ] ) ;
+---
+Fixed code: assertEquals ( "b b <b>a</b> b <b>a</b> b " , f [ 1 ] ) ;
+Genration:  assertEquals ( "MyScheduler-" + context . getName ( ) , e ) ;
+=============
+=============
+Buggy code: percentage = ( ( float ) ( tests - errors - failures ) / ( float ) tests ) * PCENT ;
+---
+Fixed code: percentage = ( ( float ) ( tests - errors - failures - skipped ) / ( float ) tests ) * PCENT ;
+Genration:  schema = ( ( long ) SModelUtil_new . findAbstractConceptDeclaration ( HBASE_REGIONSERVER_LEASE_PERIOD_KEY , operationContext . getScope ( ) ) ) ;
+=============
+=============
+Buggy code: indexReader . equals ( other . indexReader ) ;
+---
+Fixed code: indexReaderContextId . equals ( other . indexReaderContextId ) ;
+Genration:  || ( ) . equals ( "" ) . build ( ) ;
+=============
+=============
+Buggy code: this . comparator . setReference ( toCompare . < K > getField ( 0 ) ) ;
+---
+Fixed code: this . comparator . setReference ( toCompare . < K > getFieldNotNull ( 0 ) ) ;
+Genration:  this . comparator . compare ( candidate . < K > getFieldNotNull ( 0 ) ) ;
+=============
+=============
+Buggy code: result . set ( o1 . hashCode ( ) ^ o2 . hashCode ( ) ) ;
+---
+Fixed code: result . set ( ( o1 == null ? 0 : o1 . hashCode ( ) ) ^ ( o2 == null ? 0 : o2 . hashCode ( ) ) ) ;
+Genration:  result . set ( t0 . compareTo ( t1 ) ) ;
+=============
+=============
+Buggy code: return SimpleWebException . buildMessage ( 500 , null , e . getMessage ( ) ) ;
+---
+Fixed code: return SimpleWebException . buildMessage ( HttpStatus . INTERNAL_SERVER_ERROR_500 , null , e . getMessage ( ) ) ;
+Genration:  return TaskFactory . get ( work , hiveConf , true ) . equals ( "tez" ) ;
+=============
+=============
+Buggy code: . field ( "analyzer" , "whitespace" )
+---
+Fixed code: . field ( "analyzer" , "whitespace" )
+Genration:  . add (
+=============
+=============
+Buggy code: return "term=" + term + ",field=" + field + ",value=" + value ;
+---
+Fixed code: return "term=" + term + ",field=" + field + ",value=" + value + ",docIDUpto=" + docIDUpto ;
+Genration:  + + + ( + ")" ) ;
+=============
+=============
+Buggy code: initialize ( size ) ;
+---
+Fixed code: super ( size ) ;
+Genration:  super ( size ) ;
+=============
+=============
+Buggy code: fi = new FieldInfo ( name , isIndexed , fieldNumber , storeTermVector , omitNorms , storePayloads , indexOptions , docValues , normType , null ) ;
+---
+Fixed code: fi = new FieldInfo ( name , isIndexed , fieldNumber , storeTermVector , omitNorms , storePayloads , indexOptions , docValues , normType , - 1 , null ) ;
+Genration:  , rule = new CopyCommand ( null , 1 , null , null , null , null , null , null ) ;
+=============
+=============
+Buggy code: final String desc = "L" + typeMapper . mapType ( descriptor . getDefaultType ( ) , JetTypeMapperMode . IMPL ) . getInternalName ( ) + ";" ;
+---
+Fixed code: final String desc = "L" + classAsmType . getInternalName ( ) + ";" ;
+Genration:  final String [ ] = {
+=============
+=============
+Buggy code: index = new LuceneIndexService ( graphDb ) ;
+---
+Fixed code: index = graphDb . index ( ) . forNodes ( "nodes" ) ;
+Genration:  in = new ArrayList ( this ) ;
+=============
+=============
+Buggy code: headers = sourceDirectorySetFactory . create ( "headers" ) ;
+---
+Fixed code: headers = sourceDirectorySetFactory . create ( "headers" , "headers for prebuilt library '" + name + "'" ) ;
+Genration:  value = UnBoxingEvaluator . unbox ( myConditionEvaluator . evaluate ( context ) ) ;
+=============
+=============
+Buggy code: public void validateNtwkOffForNtwkInVpc ( Long networkId , long newNtwkOffId , String newCidr , String newNetworkDomain , Vpc vpc , String gateway , Account networkOwner ) {
+---
+Fixed code: public void validateNtwkOffForNtwkInVpc ( Long networkId , long newNtwkOffId , String newCidr , String newNetworkDomain , Vpc vpc , String gateway , Account networkOwner , Long aclId ) {
+Genration:  public void write ( Map < String , List < IN > > , long , List < ? extends Serializable > ,
+=============
+=============
+Buggy code: File workDir = new File ( "work" ) ;
+---
+Fixed code: File workDir = new File ( config . get ( "work.dir" , "work" ) ) ;
+Genration:  File path = new File ( path , File . currentTimeMillis ( ) ) ;
+=============
+=============
+Buggy code: cache = ObjectCacheFactory . getCache ( hconf , queryId ) ;
+---
+Fixed code: cache = ObjectCacheFactory . getCache ( hconf , queryId , false ) ;
+Genration:  fs = ObjectCacheFactory . getCache ( jconf , queryId , false ) ;
+=============
+=============
+Buggy code: lbCtx . setLbLocationMap ( skewedColValueLocationMaps ) ;
+---
+Fixed code: lbCtx . setLbLocationMap ( convertSkewedValueListToSimpleList ( skewedColValueLocationMaps ) ) ;
+Genration:  . ( ) ) ;
+=============
+=============
+Buggy code: && ref . getLastSpaceReference ( ) . getName ( ) . equals ( XWikiConstants . WIKI_SPACE ) ) {
+---
+Fixed code: && ref . getLastSpaceReference ( ) . getName ( ) . equals ( XWikiConstants . XWIKI_SPACE ) ) {
+Genration:  && ! ( ( ) . isEmpty ( ) ) {
+=============
+=============
+Buggy code: return TupleFactory . getInstance ( ) . newTuple ( arg ) ;
+---
+Fixed code: return TupleFactory . getInstance ( ) . newTuple ( AvroTupleWrapper . unionResolver ( arg ) ) ;
+Genration:  return ByteBuffer . valueOf ( ( ( BigDecimal ) o ) . signum ( ) != 0 ) ;
+=============
+=============
+Buggy code: if ( schema != null && col >= schema . size ( ) ) {
+---
+Fixed code: if ( schema != null && schema . size ( ) != 0 && col >= schema . size ( ) ) {
+Genration:  if ( ! ( ( long ) || ( ) . isEmpty ( ) ) ) {
+=============
+=============
+Buggy code: HTable table = new HTable ( conf , tables [ 0 ] ) ;
+---
+Fixed code: HTable table = new HTable ( conf , TableName . valueOf ( tables [ 0 ] ) ) ;
+Genration:  table = new HTable ( this . conf , tableName ) . close ( ) ;
+=============
+=============
+Buggy code: for ( List < ? extends Cell > cells : put . getFamilyMap ( ) . values ( ) ) {
+---
+Fixed code: for ( List < ? extends Cell > cells : put . getFamilyCellMap ( ) . values ( ) ) {
+Genration:  while ( List < ? extends Cell > > 0 : p . getFamilyCellMap ( ) . values ( ) ) {
+=============
+=============
+Buggy code: this . confOverlay = confOverlay ;
+---
+Fixed code: setConfOverlay ( confOverlay ) ;
+Genration:  this . query = new HashMap < String , Object > ( ) ;
+=============
+=============
+Buggy code: LOG . debug ( "Failed to put element into ordered stream element queue because it " +
+---
+Fixed code: LOG . debug ( "Failed to put element into unordered stream element queue because it " +
+Genration:  LOG . debug (
+=============
+=============
+Buggy code: populateMapRedPlan5 ( db . getTable ( "src" ) ) ;
+---
+Fixed code: populateMapRedPlan5 ( db . getTable ( MetaStoreUtils . DEFAULT_DATABASE_NAME , "src" ) ) ;
+Genration:  ( db . getTable ( MetaStoreUtils . DEFAULT_DATABASE_NAME , "src" ) ) ;
+=============
+=============
+Buggy code: HiveConf conf , HiveAuthenticationProvider authenticator ) {
+---
+Fixed code: HiveConf conf , HiveAuthenticationProvider authenticator , HiveAuthzSessionContext ctx ) {
+Genration:  HiveConf conf , HiveConf . ConfVars . HIVE_EXECUTION_ENGINE ) ;
+=============
+=============
+Buggy code: return CellUtil . createCellScanner ( getFamilyMap ( ) ) ;
+---
+Fixed code: return CellUtil . createCellScanner ( getFamilyCellMap ( ) ) ;
+Genration:  return ( ( BigDecimal ) o ) . signum ( ) ;
+=============
+=============
+Buggy code: if ( input == null || input . size ( ) == 0 )
+---
+Fixed code: if ( input == null || input . size ( ) == 0 || input . get ( 0 ) == null )
+Genration:  if ( input == null || input . size ( ) == 0 || input . get ( 0 ) == null )
+=============
+=============
+Buggy code: final RebootCommand command = new RebootCommand ( vmName ) ;
+---
+Fixed code: final RebootCommand command = new RebootCommand ( vmName , true ) ;
+Genration:  final RebootCommand command = new RebootCommand ( vmName , true ) ;
+=============
+=============
+Buggy code: this . tempFileName = createFileLangugeExpression ( tempFileNameExpression ) ;
+---
+Fixed code: this . tempFileName = createFileLanguageExpression ( tempFileNameExpression ) ;
+Genration:  this . chainingStrategy = ChainingStrategy . FORCE_ALWAYS ;
+=============
+=============
+Buggy code: expected . add ( "VALIDATE" ) ;
+---
+Fixed code: expected . addAll ( Collections . nCopies ( 6 , "VALIDATE" ) ) ;
+Genration:  throw new IOException ( "Files have same sequenceid: " + ")" ) ;
+=============
+=============
+Buggy code: HiveSessionImpl session = new HiveSessionImpl ( protocol , username , password ,
+---
+Fixed code: HiveSessionImpl session = new HiveSessionImpl ( null , protocol , username , password ,
+Genration:  new File ( new File ( testDir . directory ( ) ,
+=============
+=============
+Buggy code: JavaUtils . getClassLoader ( ) ) ;
+---
+Fixed code: Utilities . getSessionSpecifiedClassLoader ( ) ) ;
+Genration:  Utilities . getSessionSpecifiedClassLoader ( ) ) ;
+=============
+=============
+Buggy code: processor = wrapProcessor ( routeContext , processor ) ;
+---
+Fixed code: processor = wrapChannel ( routeContext , processor , processorType ) ;
+Genration:  , conf = new DefaultParser ( ) ;
+=============
+=============
+Buggy code: LOG . debug ( "Initialized address: " + this . toString ( ) ) ;
+---
+Fixed code: LOG . debug ( "INIT Initialized address: " + this . toString ( ) ) ;
+Genration:  LOG . debug ( "Going to close region " + currentRegion . getRegionNameAsString ( ) ) ;
+=============
+=============
+Buggy code: return new Content ( this , id ) ;
+---
+Fixed code: return new StoredContent ( this , id ) ;
+Genration:  return new StoredContent ( this , id ) ;
+=============
+=============
+Buggy code: dist = new LevensteinDistance ( ) ;
+---
+Fixed code: dist = new LevenshteinDistance ( ) ;
+Genration:  . File ( new ArrayList < ? > ( ) ) ;
+=============
+=============
+Buggy code: public boolean obtain ( long lockWaitTimeout ) throws IOException {
+---
+Fixed code: public final boolean obtain ( long lockWaitTimeout ) throws IOException {
+Genration:  public boolean equals ( HiveConf . ConfVars . boolean ) {
+=============
+=============
+Buggy code: return reader . getPosition ( ) ;
+---
+Fixed code: return reader != null ? reader . getPosition ( ) : 0 ;
+Genration:  return searcher . getSimilarity ( true ) ;
+=============
+=============
+Buggy code: doc . setDocumentURI ( reader . getLocation ( ) . getSystemId ( ) ) ;
+---
+Fixed code: doc . setDocumentURI ( new String ( reader . getLocation ( ) . getSystemId ( ) ) ) ;
+Genration:  res . asList ( Exchange . CHARSET_NAME , IOConverter . normalizeCharset ( SNodeOperations . cast ( SNodeOperations . DEFAULT_CHARSET ) ) ) ;
+=============
+=============
+Buggy code: List < CollectionRecord > list = ( List < CollectionRecord > ) getOrCreateCollectionWrapper ( ) ;
+---
+Fixed code: List < CollectionRecord > list = ( List < CollectionRecord > ) getOrCreateCollectionWrapper ( ) . getCollection ( ) ;
+Genration:  List < String > list = ( List < CollectionRecord > ) getOrCreateCollectionWrapper ( ) . getCollection ( ) ;
+=============
+=============
+Buggy code: description = "if true, firewall rule for source/end pubic port is automatically created; if false - firewall rule has to be created explicitely. Has value true by default" )
+---
+Fixed code: description = "if true, firewall rule for source/end public port is automatically created; if false - firewall rule has to be created explicitely. Has value true by default" )
+Genration:  this . = . ( ) ;
+=============
+=============
+Buggy code: col . setName ( colInfo . getAlias ( ) ) ;
+---
+Fixed code: col . setName ( unescapeIdentifier ( colInfo . getAlias ( ) ) . toLowerCase ( ) ) ;
+Genration:  . class . equals ( Exchange . BINDING , body ) ;
+=============
+=============
+Buggy code: newIndexWriterConfig ( TEST_VERSION_CURRENT , new MockAnalyzer ( MockTokenizer . WHITESPACE , false ) ) ) ;
+---
+Fixed code: newIndexWriterConfig ( TEST_VERSION_CURRENT , new MockAnalyzer ( random , MockTokenizer . WHITESPACE , false ) ) ) ;
+Genration:  newIndexWriterConfig ( TEST_VERSION_CURRENT , new MockAnalyzer ( random , MockTokenizer . WHITESPACE , false ) ) ) ;
+=============
+=============
+Buggy code: if ( ! method . getName ( ) . equals ( "writeReplace" ) ) return false ;
+---
+Fixed code: if ( ! "writeReplace" . equals ( method . getName ( ) ) ) return false ;
+Genration:  if ( ! regionInfo . isMetaTable ( ) ) return false ;
+=============
+=============
+Buggy code: ExprNodeDesc pruneExpr = pruneNode . accept ( new ExprNodeConverter ( getName ( ) , getRowType ( ) , true ) ) ;
+---
+Fixed code: ExprNodeDesc pruneExpr = pruneNode . accept ( new ExprNodeConverter ( getName ( ) , getRowType ( ) , true , getRelOptSchema ( ) . getTypeFactory ( ) ) ) ;
+Genration:  , false = ;
+=============
+=============
+Buggy code: crtTblDesc . getDatabaseName ( ) + "." + crtTblDesc . getTableName ( ) ) ;
+---
+Fixed code: crtTblDesc . getTableName ( ) ) ;
+Genration:  . write ( new Runnable ( 0 ) ) ;
+=============
+=============
+Buggy code: Processor childProcessor = routeContext . createProcessor ( this ) ;
+---
+Fixed code: Processor childProcessor = this . createChildProcessor ( routeContext , false ) ;
+Genration:  + this . createChildProcessor ( routeContext , true ) ;
+=============
+=============
+Buggy code: source = xmlConverter . toSource ( document ) ;
+---
+Fixed code: source = xmlConverter . toDOMSource ( document ) ;
+Genration:  value = UnBoxingEvaluator . unbox ( myConditionEvaluator . evaluate ( context ) ) ;
+=============
+=============
+Buggy code: state . locks ( ) . releaseExclusive ( type , resourceId ) ;
+---
+Fixed code: state . locks ( ) . delegate ( ) . releaseExclusive ( type , resourceId ) ;
+Genration:  state . createFile ( new File ( "" ) ) ;
+=============
+=============
+Buggy code: HBaseTestingUtility util = context . getHaseIntegrationTestingUtility ( ) ;
+---
+Fixed code: HBaseTestingUtility util = context . getHBaseIntegrationTestingUtility ( ) ;
+Genration:  HBaseTestingUtility util = context . getHBaseIntegrationTestingUtility ( ) ;
+=============
+=============
+Buggy code: response . sendRedirect ( _location ) ;
+---
+Fixed code: response . sendRedirect ( response . encodeRedirectURL ( _location ) ) ;
+Genration:  if ( . class . getName ( ) ) ;
+=============
+=============
+Buggy code: FileSystem fs = FileSystem . get ( conf ) ;
+---
+Fixed code: FileSystem fs = FileSystem . get ( URI . create ( location ) , conf ) ;
+Genration:  fs = conf . getVar ( ConfVars . HIVE_EXECUTION_ENGINE ( ) ) ;
+=============
+=============
+Buggy code: HLog . Writer writer = HLogFactory . createWriter ( fs , recoveredEdits , conf ) ;
+---
+Fixed code: HLog . Writer writer = HLogFactory . createRecoveredEditsWriter ( fs , recoveredEdits , conf ) ;
+Genration:  UndertowLogger . fs = HLogFactory . createRecoveredEditsWriter ( fs , conf , false ) ;
+=============
+=============
+Buggy code: final DocTermOrds dto = new DocTermOrds ( ar , "field" ) ;
+---
+Fixed code: final DocTermOrds dto = new DocTermOrds ( ar , ar . getLiveDocs ( ) , "field" ) ;
+Genration:  final LineFileDocs docs = new LineFileDocs ( random , defaultCodecSupportsDocValues ( ) ) ;
+=============
+=============
+Buggy code: return false ;
+---
+Fixed code: return delegate . isRuntime ( ) ;
+Genration:  return this ;
+=============
+=============
+Buggy code: return true ;
+---
+Fixed code: return false ;
+Genration:  return nextKeyValue ( ) ;
+=============
+=============
+Buggy code: return TOPIC_QUEUE_NAME ;
+---
+Fixed code: return getJmsConfig ( ) . getBroadcastDestinationName ( ) ;
+Genration:  return this ;
+=============
+=============
+Buggy code: mrManager . waitForFinish ( 180L , TimeUnit . SECONDS ) ;
+---
+Fixed code: mrManager . waitForFinish ( 1800L , TimeUnit . SECONDS ) ;
+Genration:  . write ( escapeUserArgs ( key , path ) ) ;
+=============
+=============
+Buggy code: lastTerm . bytes . copy ( term . bytes ) ;
+---
+Fixed code: lastTerm . bytes . copyBytes ( term . bytes ) ;
+Genration:  FieldCache . DEFAULT . purgeByCacheKey ( reader . getCoreCacheKey ( ) ) ;
+=============
+=============
+Buggy code: . newScheduledThreadPool ( this , consumer . getEndpoint ( ) . getEndpointUri ( ) , 1 ) ;
+---
+Fixed code: . newSingleThreadScheduledExecutor ( consumer , consumer . getEndpoint ( ) . getEndpointUri ( ) ) ;
+Genration:  . write ( new TranslateGraphIds ( new TranslateGraphIds ( new LongValueToUnsignedIntValue ( ) , new TestClassFilter ( ) ) ) ) ;
+=============
+=============
+Buggy code: } else if ( n . getNodeName ( ) . equalsIgnoreCase ( "interface" ) ) {
+---
+Fixed code: } else if ( "interface" . equalsIgnoreCase ( n . getNodeName ( ) ) ) {
+Genration:  } else if ( ! StringUtils . isLocal ( results , ) ) {
+=============
+=============
+Buggy code: exchange . setProperty ( Exchange . CHARSET_NAME , charset ) ;
+---
+Fixed code: exchange . setProperty ( Exchange . CHARSET_NAME , IOConverter . normalizeCharset ( charset ) ) ;
+Genration:  exchange . setProperty ( Exchange . CHARSET_NAME , IOConverter . normalizeCharset ( charset ) ) ;
+=============
+=============
+Buggy code: if ( conf . getBoolean ( USEMSLAB_KEY , USEMSLAB_DEFAULT ) ) {
+---
+Fixed code: if ( conf . getBoolean ( MemStoreLAB . USEMSLAB_KEY , MemStoreLAB . USEMSLAB_DEFAULT ) ) {
+Genration:  if ( conf . getVar ( ConfVars . HIVE_EXECUTION_ENGINE ) ) {
+=============
+=============
+Buggy code: String [ ] concreteIndices = clusterState . metaData ( ) . concreteIndices ( searchRequest . indices ( ) ) ;
+---
+Fixed code: String [ ] concreteIndices = clusterState . metaData ( ) . concreteIndices ( searchRequest . indices ( ) , false , true ) ;
+Genration:  String [ ] data = picker . toString ( resolver . getChild ( 0 ) ) ;
+=============
+=============
+Buggy code: Session session = startClient ( startServer ( serverSessionFrameListener ) , clientSessionFrameListener ) ;
+---
+Fixed code: Session session = startClient ( startSPDYServer ( serverSessionFrameListener ) , clientSessionFrameListener ) ;
+Genration:  Session session = startClient ( startSPDYServer ( serverSessionFrameListener ) ) ;
+=============
+=============
+Buggy code: val = HiveMetaStore . PARTITION_DATE_FORMAT . format ( ( Date ) value ) ;
+---
+Fixed code: val = HiveMetaStore . PARTITION_DATE_FORMAT . get ( ) . format ( ( Date ) value ) ;
+Genration:  _context = ( ( BigDecimal ) I2PAppContext . getGlobalContext ( ) ) ;
+=============
+=============
+Buggy code: locateToken ( ) ;
+---
+Fixed code: if ( myTokenType == null ) locateToken ( ) ;
+Genration:  if ( myTokenType == null ) locateToken ( ) ;
+=============
+=============
+Buggy code: Processor childProcessor = routeContext . createProcessor ( this ) ;
+---
+Fixed code: Processor childProcessor = this . createChildProcessor ( routeContext , false ) ;
+Genration:  + this . createChildProcessor ( routeContext , true ) ;
+=============
+=============
+Buggy code: IndexWriter writer = initIndex ( ) ;
+---
+Fixed code: IndexWriter writer = initIndex ( false ) ;
+Genration:  IndexWriter writer = initIndex ( false ) ;
+=============
+=============
+Buggy code: this . cfg = cfg ;
+---
+Fixed code: this . cfg = new Configuration ( cfg ) ;
+Genration:  this . query = Optional . of ( query ) ;
+=============
+=============
+Buggy code: return analyzeExpr ( ( ExprNodeDesc ) nd , searchConditions , nodeOutputs ) ;
+---
+Fixed code: return analyzeExpr ( ( ExprNodeGenericFuncDesc ) nd , searchConditions , nodeOutputs ) ;
+Genration:  return ( ( BigDecimal ) o ) ;
+=============
+=============
+Buggy code: . prepareStatement ( "INSERT INTO `cloud`.`snapshot_store_ref` (store_id, snapshot_id, created, size, parent_snapshot_id, install_path, state) select sechost_id, id, created, size, prev_snap_id, path, 'Ready' from `cloud`.`snapshots` where status = 'BackedUp' and sechost_id is not null and removed is null" ) ;
+---
+Fixed code: . prepareStatement ( "INSERT INTO `cloud`.`snapshot_store_ref` (store_id, snapshot_id, created, size, parent_snapshot_id, install_path, volume_id, update_count, ref_cnt, store_role, state) select sechost_id, id, created, size, prev_snap_id, path, volume_id, 0, 0, 'Image', 'Ready' from `cloud`.`snapshots` where status = 'BackedUp' and sechost_id is not null and removed is null" ) ;
+Genration:  . to ( true ) ;
+=============
+=============
+Buggy code: op . initialize ( null , null ) ;
+---
+Fixed code: op . initialize ( null , null , null ) ;
+Genration:  SerDeUtils . initializeSerDe ( serDe , conf , props , null ) ;
+=============
+=============
+Buggy code: return new TermsQuery ( toField , termsCollector . getCollectorTerms ( ) ) ;
+---
+Fixed code: return new TermsQuery ( toField , fromQuery , termsCollector . getCollectorTerms ( ) ) ;
+Genration:  return new ( ) . get ( key , exchange , body ) ;
+=============
+=============
+Buggy code: EditorActionUtil . cloneOrRemoveCaret ( editor , caret == null ? editor . getCaretModel ( ) . getPrimaryCaret ( ) : caret , true ) ;
+---
+Fixed code: new CloneCaretActionHandler ( true ) . execute ( editor , caret , dataContext ) ;
+Genration:  new File ( "" ) . execute ( project ) . setSourceDirectory ( sourceDirectory ) . setSourceDirectory ( sourceDirectory ) . setResources ( resources , true ) ,
+=============
+=============
+Buggy code: result . bytes = MISSING ;
+---
+Fixed code: result . bytes = BytesRef . EMPTY_BYTES ;
+Genration:  result . result = Boolean . valueOf ( result ) ;
+=============
+=============
+Buggy code: return listenerAddHandler . constructServiceName ( name ) ;
+---
+Fixed code: return UndertowService . listenerName ( name ) ;
+Genration:  return . ( ) ;
+=============
+=============
+Buggy code: elems . add ( l ) ;
+---
+Fixed code: elems . addRow ( l ) ;
+Genration:  . add ( i , random ( ) ) ;
+=============
+=============
+Buggy code: long val = ( 1 << pos ) - 1 ;
+---
+Fixed code: long val = ( 1L << pos ) - 1 ;
+Genration:  long size = ( long ) ( long ) > > > 1 ;
+=============
+=============
+Buggy code: return new HiveLockObject ( new DummyPartition (
+---
+Fixed code: return new HiveLockObject ( new DummyPartition ( tab ,
+Genration:  return new ( ) .
+=============
+=============
+Buggy code: Operation . DEFAULT_FETCH_MAX_ROWS , FetchType . QUERY_OUTPUT ) ;
+---
+Fixed code: defaultFetchRows , FetchType . QUERY_OUTPUT ) ;
+Genration:  , conf . getVar ( ConfVars . HIVE_EXECUTION_ENGINE ) ) ;
+=============
+=============
+Buggy code: double F = stats . getTotalTermFreq ( ) + tfn ;
+---
+Fixed code: double F = stats . getTotalTermFreq ( ) + 1 + tfn ;
+Genration:  float mid = ( ( long ) o ) . signum ( ) ;
+=============
+=============
+Buggy code: reference = readSplitInfo ( p , fs ) ;
+---
+Fixed code: reference = HStoreFile . readSplitInfo ( p , fs ) ;
+Genration:  schema = UnBoxingEvaluator . unbox ( myConditionEvaluator . evaluate ( context ) ) ;
+=============
+=============
+Buggy code: LOG . debug ( "Consumed {} on {}" , length , stream ) ;
+---
+Fixed code: LOG . debug ( "Data consumed, increasing window by {} for {}" , length , stream ) ;
+Genration:  LOG . debug ( "Going to close region " + configuration . getConfiguration ( ) , e ) ;
+=============
+=============
+Buggy code: return new VersionManagerImpl ( ) ;
+---
+Fixed code: return new VersionManagerImpl ( sessionDelegate ) ;
+Genration:  return new ArrayList < > ( ) ;
+=============
+=============
+Buggy code: return storageMgr . storagePoolHasEnoughSpace ( requestVolumes , pool ) ;
+---
+Fixed code: return storageMgr . storagePoolHasEnoughIops ( requestVolumes , pool ) && storageMgr . storagePoolHasEnoughSpace ( requestVolumes , pool ) ;
+Genration:  return TaskFactory . get ( proto . getFlags ( ) ) ;
+=============
+=============
+Buggy code: valString += ", partitionName.indexOf(\"/\", " + indexOfKeyStr + keyEqual . length ( ) + ")" ;
+---
+Fixed code: valString += ", partitionName.concat(\"/\").indexOf(\"/\", " + indexOfKeyStr + keyEqual . length ( ) + ")" ;
+Genration:  + + + + + ")" ) ;
+=============
+=============
+Buggy code: fileName . append ( componentPackage . replaceAll ( "\\." , File . separator ) ) . append ( File . separator ) ;
+---
+Fixed code: fileName . append ( componentPackage . replaceAll ( "\\." , Matcher . quoteReplacement ( File . separator ) ) ) . append ( File . separator ) ;
+Genration:  fileName . append ( ( ( ( ) ) . signum ( ) ) ;
+=============
+=============
+Buggy code: from ( "direct:start" ) . to ( "direct:a" , "direct:b" , "direct:c" ) ;
+---
+Fixed code: from ( "direct:start" ) . to ( "log:a?level=OFF" , "log:b?level=OFF" , "direct:c" ) ;
+Genration:  from ( "direct:start" ) . to ( "mock:result" , to . toString ( ) , module ) ;
+=============
+=============
+Buggy code: if ( ResettableValue . class . isAssignableFrom ( type ) & CopyableValue . class . isAssignableFrom ( type ) ) {
+---
+Fixed code: if ( ResettableValue . class . isAssignableFrom ( type ) && CopyableValue . class . isAssignableFrom ( type ) ) {
+Genration:  if ( . class . getName ( ) . equals ( name ) ) {
+=============
+=============
+Buggy code: fileInputStreamCache = new FileInputStreamCache ( tempFile ) ;
+---
+Fixed code: fileInputStreamCache = new FileInputStreamCache ( tempFile , ciphers ) ;
+Genration:  , parser . getTempDir ( new ArrayList < LongValue , Accumulator < ? extends Serializable > , Integer > ( ) ) ;
+=============
+=============
+Buggy code: returnVal = jobExecHelper . progress ( rj , jc ) ;
+---
+Fixed code: returnVal = jobExecHelper . progress ( rj , jc , null ) ;
+Genration:  returnVal = jobExecHelper . progress ( rj , jc , ctx . getHiveTxnManager ( ) ) ;
+=============
+=============
+Buggy code: xml = replaceXmlValue ( xml , "descr" , "Edge Security Profile for Tenant VDC" + tenantName ) ;
+---
+Fixed code: xml = replaceXmlValue ( xml , "descr" , "Edge Security Profile for Tenant VDC " + tenantName ) ;
+Genration:  xml = replaceXmlValue ( xml , "descr" , "Edge Security Profile for Tenant VDC " + tenantName ) ;
+=============
+=============
+Buggy code: UserVm destroyedVm = destroyVm ( vmId ) ;
+---
+Fixed code: UserVm destroyedVm = destroyVm ( vmId , expunge ) ;
+Genration:  = parser . unbox ( myConditionEvaluator . getThread ( ) ) ;
+=============
+=============
+Buggy code: ASTTransformationCollectorCodeVisitor annotCollector = new ASTTransformationCollectorCodeVisitor ( transformationVisitors ) ;
+---
+Fixed code: ASTTransformationCollectorCodeVisitor annotCollector = new ASTTransformationCollectorCodeVisitor ( transformationVisitors , unit ) ;
+Genration:  configuration = new long [ 0 ] ;
+=============
+=============
+Buggy code: parser . processImplicitActions ( ) ;
+---
+Fixed code: parser . processTrailingImplicitActions ( ) ;
+Genration:  throw new IOException ( new + ( ) ) ;
+=============
+=============
+Buggy code: "/jobs/:%s/vertices/:%s/subtasks/:%s/attempts/%s/accumulators" ,
+---
+Fixed code: "/jobs/:%s/vertices/:%s/subtasks/:%s/attempts/:%s/accumulators" ,
+Genration:  jobManagerJobMetricGroupFactory ,
+=============
+=============
+Buggy code: assertEquals ( "Ensure message re-readability in the exception handler" , xml , new XmlConverter ( ) . toString ( body ) ) ;
+---
+Fixed code: assertEquals ( "Ensure message re-readability in the exception handler" , xml , new XmlConverter ( ) . toString ( body , null ) ) ;
+Genration:  assertEquals ( "MyScheduler-" + context . getName ( ) , quartz . getScheduler ( ) . toString ( ) ) ;
+=============
+=============
+Buggy code: element = new CmsContainerElementBean ( OpenCms . getADEManager ( ) . convertToServerId ( id ) , null , null ) ;
+---
+Fixed code: element = new CmsContainerElementBean ( OpenCms . getADEManager ( ) . convertToServerId ( id ) , null , null , false ) ;
+Genration:  , cmd . new class = new LinkedHashSet < T > ( ) . withHiveConf ( new HiveConf ( conf ) ) ;
+=============
+=============
+Buggy code: ReferenceOrderedDatum peeked = rodQueue . peek ( ) ;
+---
+Fixed code: RODRecordList < ReferenceOrderedDatum > peeked = rodQueue . peek ( ) ;
+Genration:  value = UnBoxingEvaluator . unbox ( myConditionEvaluator . evaluate ( context ) ) ;
+=============
+=============
+Buggy code: Meta < LighterASTNode > meta = FilteredTraverser . < LighterASTNode > emptyMeta ( ) . withRoot ( lightTree . getRoot ( ) ) ;
+---
+Fixed code: Meta < LighterASTNode > meta = FilteredTraverser . < LighterASTNode > emptyMeta ( ) . withRoots ( Collections . singletonList ( lightTree . getRoot ( ) ) ) ;
+Genration:  List < ? > loadTableTask = cast ( EntityConditionList . entityConditionListFactory . object ( ) ) ;
+=============
+=============
+Buggy code: return dependency . getFrom ( ) . getId ( ) ;
+---
+Fixed code: return ( ModuleComponentIdentifier ) dependency . getFrom ( ) . getId ( ) ;
+Genration:  return ( ( BigDecimal ) o ) . signum ( ) ;
+=============
+=============
+Buggy code: myResult . put ( refName , NamedArgumentDescriptor . SIMPLE_ON_TOP ) ;
+---
+Fixed code: myResult . put ( refName , CODE_NAMED_ARGUMENTS_DESCR ) ;
+Genration:  . put ( i . class ) , name ) ;
+=============
+=============
+Buggy code: assert false : "byte streams for serialisation test are not equal" ;
+---
+Fixed code: throw new IllegalArgumentException ( "byte streams for serialisation test are not equal" ) ;
+Genration:  + true ;
+=============
+=============
+Buggy code: HttpConfigurable . getInstance ( ) . setProxyCredentials ( provider ) ;
+---
+Fixed code: HttpConfigurable . getInstance ( ) . setProxyCredentialsIfEnabled ( provider , auth . getHost ( ) ) ;
+Genration:  . get ( ) . get ( proto . getFlags ( ) ) ) ;
+=============
+=============
+Buggy code: tasks . add ( new ExternalTaskPojo ( taskName , mySettings . getExternalProjectPath ( ) , null ) ) ;
+---
+Fixed code: tasks . add ( new ExternalTaskPojo ( taskName , mySettings . getExternalProjectPath ( ) , null , null ) ) ;
+Genration:  . add ( new WriteEntity ( tab , WriteEntity . WriteType . DDL_EXCLUSIVE ) ) ;
+=============
+=============
+Buggy code: if ( networkDomain != null ) {
+---
+Fixed code: if ( networkDomain != null && networkDomain . length ( ) > 0 ) {
+Genration:  if ( ! pigContext . isEmpty ( ) ) {
+=============
+=============
+Buggy code: existingServer + " looks stale" ) ;
+---
+Fixed code: existingServer + " looks stale, new server:" + serverName ) ;
+Genration:  + "('[s1, s2]; [s3, s4]')" ) ;
+=============
+=============
+Buggy code: String seg = fileName . substring ( 0 , fileName . indexOf ( '.' ) ) ;
+---
+Fixed code: String seg = IndexFileNames . parseSegmentName ( fileName ) ;
+Genration:  String msg = exchange . getContext ( ) . getTypeConverter ( ) . convertTo ( String . class , exchange , true ) ;
+=============
+=============
+Buggy code: pos += keylength + vlength ;
+---
+Fixed code: pos += vlength ;
+Genration:  + 1 + ")" ) ;
+=============
+=============
+Buggy code: return this . masterMachineId ;
+---
+Fixed code: return new Machine ( masterMachineId , 0 , 1 , null ) ;
+Genration:  return this ;
+=============
+=============
+Buggy code: return new HivePreparedStatement ( client , sessHandle , sql ) ;
+---
+Fixed code: return new HivePreparedStatement ( this , client , sessHandle , sql ) ;
+Genration:  return new LinkedHashMap ( ) . close ( ) ,
+=============
+=============
+Buggy code: EntityConditionList < T > ecl = EntityConditionList . entityConditionListFactory . object ( ) ;
+---
+Fixed code: EntityConditionList < T > ecl = cast ( EntityConditionList . entityConditionListFactory . object ( ) ) ;
+Genration:  CompletableFuture < T > ecl = cast ( EntityConditionList . entityConditionListFactory . object ( ) ) ;
+=============
+=============
+Buggy code: HashMap < String , Operator < ? extends Serializable > > ao = new HashMap < String , Operator < ? extends Serializable > > ( ) ;
+---
+Fixed code: LinkedHashMap < String , Operator < ? extends Serializable > > ao = new LinkedHashMap < String , Operator < ? extends Serializable > > ( ) ;
+Genration:  Map < String , Object > model = new LinkedHashMap < String , Operator < ? extends Serializable > > ( ) ;
+=============
+=============
+Buggy code: . setTimeToLive ( in . timeToLive )
+---
+Fixed code: . setTimeToLive ( in . timeToLive > 0 ? in . timeToLive : Integer . MAX_VALUE )
+Genration:  . get ( RuleField . getFlags ( ) )
+=============
+=============
+Buggy code: IndexReader reader = writer . getReader ( ) ;
+---
+Fixed code: IndexReader reader = writer . getReader ( applyAllDeletes ) ;
+Genration:  IndexReader reader = IndexReader . open ( writer ) ;
+=============
+=============
+Buggy code: } else if ( propertyName . equals ( HiveConf . ConfVars . HADOOPFS . varname ) ) {
+---
+Fixed code: } else if ( propertyName . equals ( CommonConfigurationKeysPublic . FS_DEFAULT_NAME_KEY ) ) {
+Genration:  } else if ( ! + ( ( long ) o ) == 0 ) {
+=============
+=============
+Buggy code: prefix = CompilerRunnerConstants . INTERNAL_ERROR_PREFIX ;
+---
+Fixed code: prefix = INTERNAL_ERROR_PREFIX ;
+Genration:  _listener = null ;
+=============
+=============
+Buggy code: HBaseTestingUtility util = context . getHaseIntegrationTestingUtility ( ) ;
+---
+Fixed code: HBaseTestingUtility util = context . getHBaseIntegrationTestingUtility ( ) ;
+Genration:  HBaseTestingUtility util = context . getHBaseIntegrationTestingUtility ( ) ;
+=============
+=============
+Buggy code: addCommandLineOptions ( commandLine , chunk , outputPath , compilerSettings , useTempFile ) ;
+---
+Fixed code: addCommandLineOptions ( commandLine , chunk , outputPath , compilerSettings , useTempFile , true ) ;
+Genration:  LOG . asList ( hadoopDataFile [ i ] , src , null ) ;
+=============
+=============
+Buggy code: public ClientResponse < Project > get ( ) ;
+---
+Fixed code: public ClientResponse < ProjectRes > get ( ) ;
+Genration:  public abstract [ ] utf8 = new ArrayList < String > ( ) ;
+=============
+=============
+Buggy code: SelectMode m = ModeFactory . getMode ( "ssm_queries" , "find_all_operations" ) ;
+---
+Fixed code: SelectMode m = ModeFactory . getMode ( "ssm_operation_queries" , "find_all_operations" ) ;
+Genration:  , this . conf . callWithRetries ( fs , true ) ;
+=============
+=============
+Buggy code: SessionState . start ( ss ) ;
+---
+Fixed code: SessionState . setCurrentSessionState ( ss ) ;
+Genration:  workersInZooKeeper . : ( ) ) ;
+=============
+=============
+Buggy code: ModuleComponentIdentifier id = ( ModuleComponentIdentifier ) module . getPublishedAs ( ) ;
+---
+Fixed code: ModuleComponentIdentifier id = getId ( ) ;
+Genration:  RemoteHostEndPoint ep = ObjectName . getInstance ( ) . instantiateCacheManager ( ) ;
+=============
+=============
+Buggy code: if ( HiveConf . getBoolVar ( conf , HiveConf . ConfVars . HIVE_OPTIMIZE_TEZ )
+---
+Fixed code: if ( HiveConf . getVar ( conf , HiveConf . ConfVars . HIVE_EXECUTION_ENGINE ) . equals ( "tez" )
+Genration:  if ( HiveConf . getVar ( ConfVars . HIVE_EXECUTION_ENGINE ) . equals ( "tez" ) ) ) ;
+=============
+=============
+Buggy code: log . info ( "Submitting job {}." , jobGraph . getJobID ( ) ) ;
+---
+Fixed code: log . info ( "Submitting job {} (detached: {})." , jobGraph . getJobID ( ) , isDetached ( ) ) ;
+Genration:  log . info ( e . getMessage ( ) , e ) ;
+=============
+=============
+Buggy code: Hive . reloadFunctions ( ) ;
+---
+Fixed code: Hive . get ( ) . reloadFunctions ( ) ;
+Genration:  compiler . compileToDestination ( src , dest ) ;
+=============
+=============
+Buggy code: return myUi . getMainFrame ( ) . getMainComponent ( ) ;
+---
+Fixed code: return new VcsLogPanel ( this , myUi ) ;
+Genration:  return ( ( ) == null ) ;
+=============
+=============
+Buggy code: if ( ( currOp . getChildOperators ( ) == null ) ||
+---
+Fixed code: if ( ( currOp . getChildOperators ( ) == null ) || ( currOp . getChildOperators ( ) . isEmpty ( ) ) ||
+Genration:  if ( ( ( ScalaCompileOptionsInternal ) getScalaCompileOptions ( ) ) . internalIsUseAnt ( ) ) ;
+=============
+=============
+Buggy code: throw new SQLException ( "Method not supported" ) ;
+---
+Fixed code: return true ;
+Genration:  throw new SQLFeatureNotSupportedException ( "Method not supported" ) ;
+=============
+=============
+Buggy code: return getReferenceNodeMethod . execute ( ) ;
+---
+Fixed code: return localGraph . getRelationshipById ( id ) ;
+Genration:  return . ( ) ;
+=============
+=============
+Buggy code: EMPTY_START_ROW , System . currentTimeMillis ( ) , null ) ;
+---
+Fixed code: EMPTY_START_ROW , HConstants . LATEST_TIMESTAMP , null ) ;
+Genration:  catalogTracker , HConstants . LATEST_TIMESTAMP , null ) ;
+=============
+=============
+Buggy code: KernelServices servicesA = super . installInController ( subsystemXml ) ;
+---
+Fixed code: KernelServices servicesA = createKernelServicesBuilder ( null ) . setSubsystemXml ( subsystemXml ) . build ( ) ;
+Genration:  KernelServices servicesA = createKernelServicesBuilder ( null ) . setSubsystemXml ( subsystemXml ) . build ( ) ;
+=============
+=============
+Buggy code: return Integer . valueOf ( value ) ;
+---
+Fixed code: return Integer . valueOf ( value ) . intValue ( ) ;
+Genration:  return StringUtils . defaultIfEmpty ( AppWithMapReduce + getEmail ( ) , getServerFromAddress ( ) ) ;
+=============
+=============
+Buggy code: "org.apache.parquet.hadoop.ParquetInputFormat,org.apache.hadoop.hive.ql.io.parquet.MapredParquetInputFormat" ,
+---
+Fixed code: "org.apache.parquet.hadoop.ParquetInputFormat,org.apache.hadoop.hive.ql.io.parquet.MapredParquetInputFormat,org.apache.hive.storage.jdbc.JdbcInputFormat" ,
+Genration:  jobManagerJobMetricGroupFactory ,
+=============
+=============
+Buggy code: setTaskPlan ( currAliasId , currTopOp , plan , false , opProcCtx ) ;
+---
+Fixed code: setTaskPlan ( currAliasId , currTopOp , op , plan , false , opProcCtx ) ;
+Genration:  unassign ( hiveConf , null , new HashSet < Integer > ( ) ) ;
+=============
+=============
+Models of this iteration have been saved to disk
+

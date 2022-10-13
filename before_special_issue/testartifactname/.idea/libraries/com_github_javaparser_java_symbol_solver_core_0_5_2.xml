@@ -1,0 +1,18 @@
+<component name="libraryTable">
+  <library name="com.github.javaparser:java-symbol-solver-core:0.5.2" type="repository">
+    <properties maven-id="com.github.javaparser:java-symbol-solver-core:0.5.2" />
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/github/javaparser/java-symbol-solver-core/0.5.2/java-symbol-solver-core-0.5.2.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/com/google/guava/guava/18.0/guava-18.0.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/com/github/javaparser/java-symbol-solver-logic/0.5.2/java-symbol-solver-logic-0.5.2.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/com/javaslang/javaslang/2.0.0-beta/javaslang-2.0.0-beta.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/io/javaslang/javaslang/2.0.3/javaslang-2.0.3.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/io/javaslang/javaslang-match/2.0.3/javaslang-match-2.0.3.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/com/github/javaparser/java-symbol-solver-model/0.5.2/java-symbol-solver-model-0.5.2.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/javassist/javassist/3.19.0-GA/javassist-3.19.0-GA.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/com/github/javaparser/javaparser-core/3.1.2/javaparser-core-3.1.2.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

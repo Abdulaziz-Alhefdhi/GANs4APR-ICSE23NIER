@@ -1,0 +1,5 @@
+String toTest = "turkmen_spell_checker_dictionary-0.1.6-tb+fx+sm.xpi";
+|| (this.collator != null && ! this.collator.equals(other.collator) || (this.collator == null && other.collator != null))
+dest = _dpMgr.planDeployment(vmProfile, plan, exclude, null);
+LOG.info(clazz + " is not a valid POJO type because not all fields are valid POJO fields.");
+if (syncSites.isEmpty()) {
